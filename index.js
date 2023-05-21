@@ -2,7 +2,6 @@
 const express = require('express');
 global.app = express();
 const path = require('path');
-const data = require('./data.js');
 const PORT = 3000;
 
 const PATHS = new function() {
@@ -14,7 +13,15 @@ require('./backend.js');
 app.use(express.static(PATHS.dist));
 
 app.use((req, res) => {
-  res.sendFile(path.join(PATHS.dist, 'index.html'));
+  let url = req.originalUrl;
+  if (path.extname(url) === null)
+  {
+    res.sendFile(path.join(PATHS.dist, 'index.html'));
+  } else {
+    res.status(404);
+    res.send('Cannot get' + url);
+  }
+  
 });
 
 

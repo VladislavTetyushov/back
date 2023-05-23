@@ -8,7 +8,7 @@ const words = [
         img: img + '/house.jpg',
         themes: [
             'house',
-            'art'
+            'art',
         ]
 
     },

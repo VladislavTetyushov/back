@@ -7,6 +7,11 @@ app.get('/api/word-set', (req, res) => {
     res.json(findCardSetByName(wordset));   
 });
 
+app.get('/api/right-wrong', (req, res) => {
+    const wordset = req.query.wordset;
+    res.json(RandomObject(wordset));   
+});
+
 app.get('/api/word-sets', (req, res) => {
     const count = req.query.count;
     let countCards = [];
@@ -43,8 +48,40 @@ function findWordByTheme(theme) {
     let result = [];
     for (var i = 0; i < words.length; i++) {
         if (words[i].themes.includes(theme)) {
-            result.push({ word: words[i].word, translation: words[i].translate, imgPath: words[i].img});
+            result.push({ word: words[i].word, translate: words[i].translate, imgPath: words[i].img});
         }    
     }
     return result; // Возвращаем найденный объект
+}
+
+// random object
+
+function RandomObject (theme) {
+    let result = [];
+    let themeWords = findWordByTheme(theme);
+
+    for (var i = 0; i < themeWords.length; i++) {
+        const randomIndex = Math.floor(Math.random() * words.length);
+        const randomObject = words[randomIndex];
+
+        // Генерируем случайное число от 0 до 1
+        const randomChance = Math.random();
+        // Если случайное число меньше или равно 0.5 и объект верный, выполняем действия
+        if (randomChance <= 0.5) {
+            result.push({word: themeWords[i].word, visibleTranslation: themeWords[i].translate, actualTranslation: themeWords[i].translate});
+            continue;
+        }
+
+        if (randomObject.word !== themeWords[i].word) {
+            result.push({word: themeWords[i].word, visibleTranslation: randomObject.translate, actualTranslation: themeWords[i].translate});
+        } else {
+            while (randomObject.word !== themeWords[i].word) {
+                randomIndex = Math.floor(Math.random() * words.length);
+                randomObject = words[randomIndex];
+            }
+            result.push({word: themeWords[i].word, visibleTranslation: randomObject.translate, actualTranslation: themeWords[i].translate});
+        }
+        result.push()
+    }
+    return result;
 }

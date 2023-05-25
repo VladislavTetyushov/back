@@ -3,7 +3,7 @@ let img = '/assets/images';
 const words = [
     {
         word: 'house',
-        transcript: '[haus]',
+        transcription: '[haus]',
         translate: 'дом',
         img: img + '/house.jpg',
         themes: [
@@ -14,7 +14,7 @@ const words = [
     },
     {
         word: 'apartment',
-        transcript: '[ə’pɑːtmənt]',
+        transcription: '[ə’pɑːtmənt]',
         translate: 'квартира',
         img: img + '/apartment.jpg',
         themes: [
@@ -24,8 +24,8 @@ const words = [
     },
     {
         word: 'room',
-        transcript: '[ruːm]',
-        translate: 'дом',
+        transcription: '[ruːm]',
+        translate: 'комната',
         img: img + '/room.jpg',
         themes: [
             'house',
@@ -34,7 +34,7 @@ const words = [
     },
     {
         word: 'bathroom',
-        transcript: '[‘bɑːθruːm]',
+        transcription: '[‘bɑːθruːm]',
         translate: 'ванная комната',
         img: img + '/bathroom.jpg',
         themes: [
@@ -44,7 +44,7 @@ const words = [
     },
     {
         word: 'balcony',
-        transcript: '[‘bælkənɪ]',
+        transcription: '[‘bælkənɪ]',
         translate: 'балкон',
         img: img + '/balcony.jpg',
         themes: [
@@ -54,7 +54,7 @@ const words = [
     },
     {
         word: 'bedroom',
-        transcript: '[‘bedruːm]',
+        transcription: '[‘bedruːm]',
         translate: 'спальня',
         img: img + '/bedroom.jpg',
         themes: [
@@ -64,7 +64,7 @@ const words = [
     },
     {
         word: 'closet',
-        transcript: '[‘klɔzɪt]',
+        transcription: '[‘klɔzɪt]',
         translate: 'шкаф',
         img: img + '/closet.jpg',
         themes: [
@@ -74,7 +74,7 @@ const words = [
     },
     {
         word: 'dining room',
-        transcript: '[‘daɪnɪŋˌrum]',
+        transcription: '[‘daɪnɪŋˌrum]',
         translate: 'столовая',
         img: img + '/dining_room.jpg',
         themes: [
@@ -84,7 +84,7 @@ const words = [
     },
     {
         word: 'doorbell',
-        transcript: '[‘dɔːbel]',
+        transcription: '[‘dɔːbel]',
         translate: 'дверной звонок',
         img: img + '/doorbell.jpg',
         themes: [
@@ -94,7 +94,7 @@ const words = [
     },
     {
         word: 'upstairs',
-        transcript: '[ʌp’steəz]',
+        transcription: '[ʌp’steəz]',
         translate: 'верхний этаж',
         img: img + '/upstairs.jpg',
         themes: [
@@ -104,7 +104,7 @@ const words = [
     },
     {
         word: 'downstairs',
-        transcript: '[‘daun’steəz]',
+        transcription: '[‘daun’steəz]',
         translate: 'подвальный этаж',
         img: img + '/downstairs.jpg',
         themes: [
@@ -114,7 +114,7 @@ const words = [
     },
     {
         word: 'roof',
-        transcript: '[ruːf]',
+        transcription: '[ruːf]',
         translate: 'крыша, кровля',
         img: img + '/roof.jpg',
         themes: [
@@ -124,7 +124,7 @@ const words = [
     },
     {
         word: 'window',
-        transcript: '[‘wɪndəu]',
+        transcription: '[‘wɪndəu]',
         translate: 'окно',
         img: img + '/window.jpg',
         themes: [

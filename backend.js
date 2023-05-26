@@ -29,7 +29,7 @@ app.get('/api/word-sets', (req, res) => {
 
 app.get('/api/right-wrong', (req, res) => {
     const wordset = req.query.wordset;
-    res.json(RandomObject(wordset));   
+    res.json(RandomWordset(wordset));   
 });
 
 app.get('/api/en-ru', (req, res) => {
@@ -37,12 +37,22 @@ app.get('/api/en-ru', (req, res) => {
     res.json(WordEnRu(wordset));   
 });
 
+app.get('/api/ru-en', (req, res) => {
+    const wordset = req.query.wordset;
+    res.json(WordRuEn(wordset));   
+});
+
+
+
+// функции
 
 function addWords() {
     for (var i = 0; i < wordSets.length; i++) {
         wordSets[i].words = findWordByTheme(wordSets[i]['id']);
     }
 }
+
+//поиск ворд-сетов, слов
 
 function findWordSetByName(word) {
     let result = [];
@@ -64,9 +74,8 @@ function findWordByTheme(theme) {
     return result; // Возвращаем найденный объект
 }
 
-// random object
 
-function RandomObject (theme) {
+function RandomWordset (theme) {
     let result = [];
     let themeWords = findWordByTheme(theme);
 
@@ -113,7 +122,7 @@ function RandomObject (theme) {
     return result;
 }
 
-// en-ru ru-en 
+// Для тренажера en-ru, ru-en 
 
 function WordEnRu (theme) {
     let result = [];
@@ -155,6 +164,53 @@ function WordEnRu (theme) {
             result[i].options.push(
                 {
                     translate: randomWord.translate, 
+                    isCorrect: false
+                }
+            );
+        }
+    }
+    return result;
+}
+
+function WordRuEn (theme) {
+    let result = [];
+    let themeWords = findWordByTheme(theme);
+    let optionsLength = 4;
+
+    for (var i = 0; i < themeWords.length; i++) {
+    
+        let trueIndex = Math.floor(Math.random() * optionsLength);    
+        
+        result.push(
+            {
+                word: themeWords[i].translate, 
+                options: []
+            }
+        );
+
+        for (var j = 0; j < 5; j++) {
+
+            if (trueIndex === j) {
+                result[i].options.push(
+                    {
+                        translate: themeWords[i].word, 
+                        isCorrect: true
+                    }
+                );
+                continue;
+            }
+
+            let falseIndex = Math.floor(Math.random() * words.length);
+            let randomWord = words[falseIndex];   
+
+            while (randomWord.translate === themeWords[i].translate || result[i].options.some(obj => obj.word === randomWord.word)) {
+                randomIndex = Math.floor(Math.random() * words.length);
+                randomWord = words[randomIndex];
+            }
+
+            result[i].options.push(
+                {
+                    translate: randomWord.word, 
                     isCorrect: false
                 }
             );

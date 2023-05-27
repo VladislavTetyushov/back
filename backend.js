@@ -25,11 +25,17 @@ app.get('/api/word-sets', (req, res) => {
     }
 });
 
+// слово-дня
+
+app.get('/api/day-word', (req, res) => {
+    res.json(DayWord());
+});
+
 //тренажеры
 
 app.get('/api/right-wrong', (req, res) => {
     const wordset = req.query.wordset;
-    res.json(RandomWordset(wordset));   
+    res.json(RightWrong(wordset));   
 });
 
 app.get('/api/en-ru', (req, res) => {
@@ -58,7 +64,14 @@ function findWordSetByName(word) {
     let result = [];
     for (var i = 0; i < wordSets.length; i++) {
         if (wordSets[i].id === word) {
-            result.push({ id: wordSets[i].id, imgThemePath: wordSets[i].imgThemePath, title: wordSets[i].title, description: wordSets[i].description});
+            result.push(
+                { 
+                    id: wordSets[i].id, 
+                    imgThemePath: wordSets[i].imgThemePath, 
+                    title: wordSets[i].title, 
+                    description: wordSets[i].description
+                }
+            );
         }
     }
     return result; 
@@ -68,14 +81,22 @@ function findWordByTheme(theme) {
     let result = [];
     for (var i = 0; i < words.length; i++) {
         if (words[i].themes.includes(theme)) {
-            result.push({ word: words[i].word, translate: words[i].translate, transcription: words[i].transcription, imgPath: words[i].img});
+            result.push(
+                { 
+                    word: words[i].word, 
+                    translate: words[i].translate[0].translate, 
+                    transcription: words[i].transcription, 
+                    imgPath: words[i].img
+                }
+            );
         }    
     }
     return result; // Возвращаем найденный объект
 }
 
+//для тренажера верно-неверно
 
-function RandomWordset (theme) {
+function RightWrong (theme) {
     let result = [];
     let themeWords = findWordByTheme(theme);
 
@@ -97,27 +118,18 @@ function RandomWordset (theme) {
             continue;
         }
 
-        if (randomWord.word !== themeWords[i].word) {
-            result.push(
-                {   
-                    word: themeWords[i].word,
-                    visibleTranslation: randomWord.translate, 
-                    actualTranslation: themeWords[i].translate
-                }
-            );
-        } else {
-            while (randomWord.word === themeWords[i].word) {
-                randomIndex = Math.floor(Math.random() * words.length);
-                randomWord = words[randomIndex];
-            }
-            result.push(
-                {
-                    word: themeWords[i].word,
-                    visibleTranslation: randomWord.translate, 
-                    actualTranslation: themeWords[i].translate
-                }
-            );
+        while (randomWord.word === themeWords[i].word) {
+            randomIndex = Math.floor(Math.random() * words.length);
+            randomWord = words[randomIndex];
         }
+
+        result.push(
+            {
+                word: themeWords[i].word,
+                visibleTranslation: randomWord.translate[0].translate, 
+                actualTranslation: themeWords[i].translate
+            }
+        );
     }
     return result;
 }
@@ -156,14 +168,14 @@ function WordEnRu (theme) {
             let falseIndex = Math.floor(Math.random() * words.length);
             let randomWord = words[falseIndex];   
 
-            while (randomWord.word === themeWords[i].word || result[i].options.some(obj => obj.translate === randomWord.translate)) {
+            while (randomWord.word === themeWords[i].word || result[i].options.some(obj => obj.translate === randomWord.translate[0].translate)) {
                 randomIndex = Math.floor(Math.random() * words.length);
                 randomWord = words[randomIndex];
             }
 
             result[i].options.push(
                 {
-                    translate: randomWord.translate, 
+                    translate: randomWord.translate[0].translate, 
                     isCorrect: false
                 }
             );
@@ -203,7 +215,7 @@ function WordRuEn (theme) {
             let falseIndex = Math.floor(Math.random() * words.length);
             let randomWord = words[falseIndex];   
 
-            while (randomWord.translate === themeWords[i].translate || result[i].options.some(obj => obj.word === randomWord.word)) {
+            while (randomWord.translate[0].translate === themeWords[i].translate || result[i].options.some(obj => obj.word === randomWord.word)) {
                 randomIndex = Math.floor(Math.random() * words.length);
                 randomWord = words[randomIndex];
             }
@@ -217,4 +229,17 @@ function WordRuEn (theme) {
         }
     }
     return result;
+}
+
+// для слово-дня
+
+function DayWord () {
+    let WordIndex = Math.floor(Math.random() * words.length);
+    let randomWord = 
+        { 
+            word: words[WordIndex].word, 
+            transcription: words[WordIndex].transcription, 
+            translate: words[WordIndex].translate
+        }; 
+    return randomWord;
 }

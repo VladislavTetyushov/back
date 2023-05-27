@@ -4,7 +4,13 @@ const words = [
     {
         word: 'house',
         transcription: '[haus]',
-        translate: 'дом',
+        translate: [
+                {translate: 'дом', frequency: "75%"},
+                {translate: 'жилище', frequency: "10%"},
+                {translate: 'здание', frequency: "7%"},
+                {translate: 'театр', frequency: "5%"},
+                {translate: 'палата', frequency: "3%"}
+        ],
         img: img + '/house.jpg',
         themes: [
             'house',
@@ -15,7 +21,12 @@ const words = [
     {
         word: 'apartment',
         transcription: '[ə’pɑːtmənt]',
-        translate: 'квартира',
+        translate: [
+            {translate: 'квартира', frequency: "45%"},
+            {translate: 'апартамент', frequency: "45%"},
+            {translate: 'комната', frequency: "5%"},
+            {translate: 'помещение', frequency: "5%"}
+        ],
         img: img + '/apartment.jpg',
         themes: [
             'house',
@@ -25,7 +36,13 @@ const words = [
     {
         word: 'room',
         transcription: '[ruːm]',
-        translate: 'комната',
+        translate: [
+            {translate: 'комната', frequency: "35%"},
+            {translate: 'номер', frequency: "35%"},
+            {translate: 'помещение', frequency: "15%"},
+            {translate: 'место', frequency: "10%"},
+            {translate: 'пространство', frequency: "5%"}
+        ],
         img: img + '/room.jpg',
         themes: [
             'house',
@@ -35,7 +52,11 @@ const words = [
     {
         word: 'bathroom',
         transcription: '[‘bɑːθruːm]',
-        translate: 'ванная комната',
+        translate: [
+            {translate: 'ванная комната', frequency: "90%"},
+            {translate: 'туалет', frequency: "5%"},
+            {translate: 'уборная', frequency: "5%"}
+        ],
         img: img + '/bathroom.jpg',
         themes: [
             'house',
@@ -45,7 +66,10 @@ const words = [
     {
         word: 'balcony',
         transcription: '[‘bælkənɪ]',
-        translate: 'балкон',
+        translate: [
+            {translate: 'балкон', frequency: "95%"},
+            {translate: 'лоджия', frequency: "5%"}
+        ],
         img: img + '/balcony.jpg',
         themes: [
             'house',
@@ -55,7 +79,11 @@ const words = [
     {
         word: 'bedroom',
         transcription: '[‘bedruːm]',
-        translate: 'спальня',
+        translate: [
+            {translate: 'спальня', frequency: "90%"},
+            {translate: 'комната', frequency: "5%"},
+            {translate: 'кровать', frequency: "5%"}
+        ],
         img: img + '/bedroom.jpg',
         themes: [
             'house',
@@ -65,7 +93,13 @@ const words = [
     {
         word: 'closet',
         transcription: '[‘klɔzɪt]',
-        translate: 'шкаф',
+        translate: [
+            {translate: 'шкаф', frequency: "45%"},
+            {translate: 'чулан', frequency: "40%"},
+            {translate: 'уборная', frequency: "5%"},
+            {translate: 'клозет', frequency: "5%"},
+            {translate: 'небольшой кабинет', frequency: "5%"}
+        ],
         img: img + '/closet.jpg',
         themes: [
             'house',
@@ -75,7 +109,11 @@ const words = [
     {
         word: 'dining room',
         transcription: '[‘daɪnɪŋˌrum]',
-        translate: 'столовая',
+        translate: [
+            {translate: 'столовая', frequency: "80%"},
+            {translate: 'обеденная комната', frequency: "10%"},
+            {translate: 'обеденный зал', frequency: "10%"}
+        ],
         img: img + '/dining_room.jpg',
         themes: [
             'house',
@@ -85,7 +123,11 @@ const words = [
     {
         word: 'doorbell',
         transcription: '[‘dɔːbel]',
-        translate: 'дверной звонок',
+        translate: [
+            {translate: 'дверной звонок', frequency: "50%"},
+            {translate: 'домофон', frequency: "45%"},
+            {translate: 'звонок', frequency: "5%"}
+        ],
         img: img + '/doorbell.jpg',
         themes: [
             'house',
@@ -95,7 +137,11 @@ const words = [
     {
         word: 'upstairs',
         transcription: '[ʌp’steəz]',
-        translate: 'верхний этаж',
+        translate: [
+            {translate: 'верхний этаж', frequency: "40%"},
+            {translate: 'вверх по лестнице', frequency: "40%"},
+            {translate: 'верхняя часть здания', frequency: "20%"}
+        ],
         img: img + '/upstairs.jpg',
         themes: [
             'house',
@@ -105,7 +151,11 @@ const words = [
     {
         word: 'downstairs',
         transcription: '[‘daun’steəz]',
-        translate: 'подвальный этаж',
+        translate: [
+            {translate: 'нижний этаж', frequency: "40%"},
+            {translate: 'вниз по лестнице', frequency: "40%"},
+            {translate: 'нижняя часть здания', frequency: "20%"}
+        ],
         img: img + '/downstairs.jpg',
         themes: [
             'house',
@@ -115,7 +165,13 @@ const words = [
     {
         word: 'roof',
         transcription: '[ruːf]',
-        translate: 'крыша, кровля',
+        translate: [
+            {translate: 'крыша', frequency: "65%"},
+            {translate: 'кровля', frequency: "15%"},
+            {translate: 'потолок', frequency: "10%"},
+            {translate: 'кровельный материал', frequency: "5%"},
+            {translate: 'максимальная цена', frequency: "5%"}
+        ],
         img: img + '/roof.jpg',
         themes: [
             'house',
@@ -125,7 +181,12 @@ const words = [
     {
         word: 'window',
         transcription: '[‘wɪndəu]',
-        translate: 'окно',
+        translate: [
+            {translate: 'окно', frequency: "70%"},
+            {translate: 'форточка', frequency: "20%"},
+            {translate: 'витрина', frequency: "5%"},
+            {translate: 'иллюминатор', frequency: "5%"}
+        ],
         img: img + '/window.jpg',
         themes: [
             'house',

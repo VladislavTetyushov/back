@@ -725,6 +725,163 @@ const words = [
             'tools',
         ]
     },
+    {
+        word: 'food',
+        transcription: '[fuːd]',
+        translate: [
+            {translate: 'еда', frequency: 35},
+            {translate: 'питание', frequency: 35},
+            {translate: 'пища', frequency: 15},
+            {translate: 'продовольствие', frequency: 10},
+            {translate: 'корм', frequency: 5}     
+        ],
+        img: img + '/food.jpg',
+        themes: [
+            'food',
+        ]
+    },
+    {
+        word: 'ham',
+        transcription: '[hæm]',
+        translate: [
+            {translate: 'ветчина', frequency: 35},
+            {translate: 'окорок', frequency: 30},
+            {translate: 'радиолюбитель', frequency: 20},
+            {translate: 'бедро', frequency: 10},
+            {translate: 'ляжка', frequency: 5}     
+        ],
+        img: img + '/ham.jpg',
+        themes: [
+            'food',
+        ]
+    },
+    {
+        word: 'sausage',
+        transcription: '[‘sɔsɪʤ]',
+        translate: [
+            {translate: 'колбаса', frequency: 40},
+            {translate: 'сосиска', frequency: 40},
+            {translate: 'сарделька', frequency: 20}
+        ],
+        img: img + '/sausage.jpg',
+        themes: [
+            'food',
+        ]
+    },
+    {
+        word: 'egg',
+        transcription: '[eg]',
+        translate: [
+            {translate: 'яйцо', frequency: 60},
+            {translate: 'яйцеклетка', frequency: 30},
+            {translate: 'зародыш', frequency: 10}
+        ],
+        img: img + '/egg.jpg',
+        themes: [
+            'food',
+        ]
+    },
+    {
+        word: 'pizza',
+        transcription: '[‘piːtsə]',
+        translate: [
+            {translate: 'пицца', frequency: 100},
+        ],
+        img: img + '/pizza.jpg',
+        themes: [
+            'food',
+        ]
+    },
+    {
+        word: 'soup',
+        transcription: '[suːp]',
+        translate: [
+            {translate: 'суп', frequency: 60},
+            {translate: 'похлебка', frequency: 35},
+            {translate: 'густой туман', frequency: 5}
+        ],
+        img: img + '/soup.jpg',
+        themes: [
+            'food',
+        ]
+    },
+    {
+        word: 'bread',
+        transcription: '[bred]',
+        translate: [
+            {translate: 'хлеб', frequency: 80},
+            {translate: 'пища', frequency: 10},
+            {translate: 'деньги', frequency: 5},
+            {translate: 'средства к существованию', frequency: 5}
+        ],
+        img: img + '/bread.jpg',
+        themes: [
+            'food',
+        ]
+    },
+    {
+        word: 'milk',
+        transcription: '[mɪlk]',
+        translate: [
+            {translate: 'молоко', frequency: 80},
+            {translate: 'латекс', frequency: 20}
+        ],
+        img: img + '/milk.jpg',
+        themes: [
+            'food',
+        ]
+    },
+    {
+        word: 'porridge',
+        transcription: '[‘pɔrɪʤ]',
+        translate: [
+            {translate: 'каша', frequency: 60},
+            {translate: 'овсяная каша', frequency: 30},
+            {translate: 'тюремное заключение', frequency: 10}
+        ],
+        img: img + '/porridge.jpg',
+        themes: [
+            'food',
+        ]
+    },
+    {
+        word: 'cookie',
+        transcription: '[‘kukɪ]',
+        translate: [
+            {translate: 'печенье', frequency: 80},
+            {translate: 'булочка', frequency: 20}
+        ],
+        img: img + '/cookie.jpg',
+        themes: [
+            'food',
+        ]
+    },
+    {
+        word: 'cocktail',
+        transcription: '[‘kɔkteɪl]',
+        translate: [
+            {translate: 'коктейль', frequency: 80},
+            {translate: 'лошадь с подрезанным хвостом', frequency: 10},
+            {translate: 'выскочка', frequency: 10}
+        ],
+        img: img + '/cocktail.jpg',
+        themes: [
+            'food',
+        ]
+    },
+    {
+        word: 'pie',
+        transcription: '[paɪ]',
+        translate: [
+            {translate: 'пирог', frequency: 40},
+            {translate: 'торт', frequency: 30},
+            {translate: 'пирожок', frequency: 30}
+        ],
+        img: img + '/pie.jpg',
+        themes: [
+            'food',
+        ]
+    },
 ]
 
 module.exports = words;

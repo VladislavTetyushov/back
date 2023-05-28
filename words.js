@@ -376,6 +376,191 @@ const words = [
             'fruits',
         ]
     },
+    {
+        word: 'flower',
+        transcription: '[ˈflaʊə]',
+        translate: [
+            {translate: 'цветок', frequency: 55},
+            {translate: 'цвет', frequency: 35},
+            {translate: 'цветение', frequency: 5},
+            {translate: 'лучшая часть', frequency: 5}
+        ],
+        img: img + '/flower.jpg',
+        themes: [
+            'flowers',
+        ]
+    },
+    {
+        word: 'rose',
+        transcription: '[rəʊz]',
+        translate: [
+            {translate: 'роза', frequency: 70},
+            {translate: 'розовый цвет', frequency: 15},
+            {translate: 'разбрызгиватель', frequency: 5},
+            {translate: 'сетка', frequency: 5},
+            {translate: 'румянец', frequency: 5}
+        ],
+        img: img + '/rose.jpg',
+        themes: [
+            'flowers',
+        ]
+    },
+    {
+        word: 'tulip',
+        transcription: '[ˈtjuːlɪp]',
+        translate: [
+            {translate: 'тюльпан', frequency: 100}
+        ],
+        img: img + '/tulip.jpg',
+        themes: [
+            'flowers',
+        ]
+    },
+    {
+        word: 'carnation',
+        transcription: '[kɑːˈneɪʃ(ə)n]',
+        translate: [
+            {translate: 'гвоздика', frequency: 75},
+            {translate: 'разные оттенки красноватых тонов', frequency: 15},
+            {translate: 'телесный цвет', frequency: 10}
+        ],
+        img: img + '/carnation.jpg',
+        themes: [
+            'flowers',
+        ]
+    },
+    {
+        word: 'gladiolus',
+        transcription: '[ˈɡlædɪˈəʊləsɪz]',
+        translate: [
+            {translate: 'гладиолус', frequency: 75},
+            {translate: 'шпажник', frequency: 15}
+        ],
+        img: img + '/gladiolus.jpg',
+        themes: [
+            'flowers',
+        ]
+    },
+    {
+        word: 'lily',
+        transcription: '[ˈlɪlɪ]',
+        translate: [
+            {translate: 'лилия', frequency: 60},
+            {translate: 'кувшинка', frequency: 25},
+            {translate: 'ландыш', frequency: 15}
+        ],
+        img: img + '/lily.jpg',
+        themes: [
+            'flowers',
+        ]
+    },
+    {
+        word: 'orchid',
+        transcription: '[ˈɔːkɪd]',
+        translate: [
+            {translate: 'орхидея', frequency: 75},
+            {translate: 'светло-лиловый цвет', frequency: 25}
+        ],
+        img: img + '/orchid.jpg',
+        themes: [
+            'flowers',
+        ]
+    },
+    {
+        word: 'peony',
+        transcription: '[ˈpiːənɪ]',
+        translate: [
+            {translate: 'пион', frequency: 100}
+        ],
+        img: img + '/peony.jpg',
+        themes: [
+            'flowers',
+        ]
+    },
+    {
+        word: 'daisy',
+        transcription: '[ˈdeɪzɪ]',
+        translate: [
+            {translate: 'маргаритка', frequency: 80},
+            {translate: 'нивяник обыкновенный', frequency: 10},
+            {translate: 'поповник', frequency: 5},
+            {translate: 'что-либо первоклассное', frequency: 5}
+        ],
+        img: img + '/daisy.jpg',
+        themes: [
+            'flowers',
+        ]
+    },
+    {
+        word: 'violet',
+        transcription: '[ˈvaɪəlɪt]',
+        translate: [
+            {translate: 'фиалка', frequency: 45},
+            {translate: 'фиолетовый', frequency: 45},
+            {translate: 'лиловый', frequency: 10}
+        ],
+        img: img + '/violet.jpg',
+        themes: [
+            'flowers',
+        ]
+    },
+    {
+        word: 'lotus',
+        transcription: '[ˈləʊtəs]',
+        translate: [
+            {translate: 'лотос', frequency: 100}
+        ],
+        img: img + '/lotus.jpg',
+        themes: [
+            'flowers',
+        ]
+    },
+    {
+        word: 'sunflower',
+        transcription: '[ˈsʌnˌflaʊə]',
+        translate: [
+            {translate: 'подсолнух', frequency: 100}
+        ],
+        img: img + '/sunflower.jpg',
+        themes: [
+            'flowers',
+        ]
+    },
+    {
+        word: 'dahlia',
+        transcription: '[ˈdeɪljə]',
+        translate: [
+            {translate: 'георгина', frequency: 100}
+        ],
+        img: img + '/dahlia.jpg',
+        themes: [
+            'flowers',
+        ]
+    },
+    {
+        word: 'dandelion',
+        transcription: '[ˈdændɪlaɪən]',
+        translate: [
+            {translate: 'одуванчик', frequency: 100},
+        ],
+        img: img + '/dandelion.jpg',
+        themes: [
+            'flowers',
+        ]
+    },
+    {
+        word: 'lavender',
+        transcription: '[ˈlævɪndə]',
+        translate: [
+            {translate: 'лаванда', frequency: 70},
+            {translate: 'бледно-лиловый цвет', frequency: 15},
+            {translate: 'высушенные листья лаванды', frequency: 15}
+        ],
+        img: img + '/lavender.jpg',
+        themes: [
+            'flowers',
+        ]
+    },
 ]
 
 module.exports = words;

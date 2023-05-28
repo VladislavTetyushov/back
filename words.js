@@ -561,6 +561,170 @@ const words = [
             'flowers',
         ]
     },
+    {
+        word: 'tool',
+        transcription: '[tuːl]',
+        translate: [
+            {translate: 'инструмент', frequency: 50},
+            {translate: 'орудие', frequency: 30},
+            {translate: 'резец', frequency: 10},
+            {translate: 'станок', frequency: 10}
+        ],
+        img: img + '/tool.jpg',
+        themes: [
+            'tools',
+        ]
+    },
+    {
+        word: 'hammer',
+        transcription: '[‘hæmə]',
+        translate: [
+            {translate: 'молоток', frequency: 50},
+            {translate: 'молот', frequency: 30},
+            {translate: 'ударник', frequency: 10},
+            {translate: 'молоток аукциониста', frequency: 10}
+        ],
+        img: img + '/hammer.jpg',
+        themes: [
+            'tools',
+        ]
+    },
+    {
+        word: 'handsaw',
+        transcription: '[‘hæn(d)sɔː]',
+        translate: [
+            {translate: 'ручная пила', frequency: 50},
+            {translate: 'ножовка', frequency: 50}
+        ],
+        img: img + '/handsaw.jpg',
+        themes: [
+            'tools',
+        ]
+    },
+    {
+        word: 'sandpaper',
+        transcription: '[‘sæn(d)ˌpeɪpə]',
+        translate: [
+            {translate: 'наждачная бумага', frequency: 55},
+            {translate: 'шкурка', frequency: 35},
+            {translate: 'стеклянная бумага', frequency: 10}
+        ],
+        img: img + '/sandpaper.jpg',
+        themes: [
+            'tools',
+        ]
+    },
+    {
+        word: 'drill',
+        transcription: '[drɪl]',
+        translate: [
+            {translate: 'дрель', frequency: 35},
+            {translate: 'сверло', frequency: 30},
+            {translate: 'бур', frequency: 20},
+            {translate: 'тренировка', frequency: 10},
+            {translate: 'муштра', frequency: 5}
+        ],
+        img: img + '/drill.jpg',
+        themes: [
+            'tools',
+        ]
+    },
+    {
+        word: 'vise',
+        transcription: '[vaɪs]',
+        translate: [
+            {translate: 'тиски', frequency: 50},
+            {translate: 'клещи', frequency: 35},
+            {translate: 'виза', frequency: 10},
+            {translate: 'зажимной патрон', frequency: 5}
+        ],
+        img: img + '/vise.jpg',
+        themes: [
+            'tools',
+        ]
+    },
+    {
+        word: 'screwdriver',
+        transcription: '[‘skruːˌdraɪvə]',
+        translate: [
+            {translate: 'отвертка', frequency: 60},
+            {translate: 'шуруповерт', frequency: 30},
+            {translate: 'водка с апельсиновым соком и льдом', frequency: 10}
+        ],
+        img: img + '/screwdriver.jpg',
+        themes: [
+            'tools',
+        ]
+    },
+    {
+        word: 'awl',
+        transcription: '[ɔːl]',
+        translate: [
+            {translate: 'шило', frequency: 100}
+        ],
+        img: img + '/awl.jpg',
+        themes: [
+            'tools',
+        ]
+    },
+    {
+        word: 'chisel',
+        transcription: '[‘ʧɪz(ə)l]',
+        translate: [
+            {translate: 'зубило', frequency: 35},
+            {translate: 'долото', frequency: 25},
+            {translate: 'резец', frequency: 25},
+            {translate: 'стамеска', frequency: 10},    
+            {translate: 'чекан', frequency: 5}          
+        ],
+        img: img + '/chisel.jpg',
+        themes: [
+            'tools',
+        ]
+    },
+    {
+        word: 'wrench',
+        transcription: '[ren(t)ʃ]',
+        translate: [
+            {translate: 'гаечный ключ', frequency: 70},
+            {translate: 'щемящая тоска', frequency: 10},
+            {translate: 'вывих', frequency: 10},
+            {translate: 'искажение', frequency: 10}      
+        ],
+        img: img + '/wrench.jpg',
+        themes: [
+            'tools',
+        ]
+    },
+    {
+        word: 'pliers',
+        transcription: '[‘plaɪəz]',
+        translate: [
+            {translate: 'плоскогубцы', frequency: 35},
+            {translate: 'клещи', frequency: 30},
+            {translate: 'щипцы', frequency: 25},
+            {translate: 'цанги', frequency: 10}      
+        ],
+        img: img + '/pliers.jpg',
+        themes: [
+            'tools',
+        ]
+    },
+    {
+        word: 'axe',
+        transcription: '[æks]',
+        translate: [
+            {translate: 'топор', frequency: 45},
+            {translate: 'топор', frequency: 25},
+            {translate: 'секира', frequency: 15},
+            {translate: 'колун', frequency: 10},
+            {translate: 'казнь', frequency: 5}     
+        ],
+        img: img + '/axe.jpg',
+        themes: [
+            'tools',
+        ]
+    },
 ]
 
 module.exports = words;

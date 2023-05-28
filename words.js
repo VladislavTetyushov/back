@@ -324,7 +324,7 @@ const words = [
         translate: [
             {translate: 'персик', frequency: 70},
             {translate: 'персиковое дерево', frequency: 10},
-            {translate: 'персиковый цвет', frequency: 10}
+            {translate: 'персиковый цвет', frequency: 10},
             {translate: 'первый сорт', frequency: 5},
             {translate: 'красотка', frequency: 5}
         ],
@@ -339,7 +339,7 @@ const words = [
         translate: [
             {translate: 'слива', frequency: 70},
             {translate: 'сливовое дерево', frequency: 10},
-            {translate: 'выгодный заказ', frequency: 10}
+            {translate: 'выгодный заказ', frequency: 10},
             {translate: 'лакомый кусочек', frequency: 5},
             {translate: 'доходное место', frequency: 5}
         ],

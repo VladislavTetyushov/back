@@ -1,5 +1,6 @@
 const express = require('express');
 const wordSets = require('./wordSets.js');
+const reviews = require('./reviews.js');
 let words = require('./words.js');
 
 //наборы слов
@@ -48,7 +49,11 @@ app.get('/api/ru-en', (req, res) => {
     res.json(WordRuEn(wordset));   
 });
 
+// отзывы
 
+app.get('/api/reviews', (req, res) => {
+    res.json(reviews);
+});
 
 // функции
 

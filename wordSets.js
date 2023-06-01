@@ -2,10 +2,10 @@ let imgTheme = 'assets/images/theme';
 
 let imgThemedata = {
     house: imgTheme + '/house.jpg',
-    house: imgTheme + '/fruits.jpg',
-    house: imgTheme + '/flowers.jpg',
-    house: imgTheme + '/tools.jpg',
-    house: imgTheme + '/food.jpg'
+    fruits: imgTheme + '/fruits.jpg',
+    flowers: imgTheme + '/flowers.jpg',
+    tools: imgTheme + '/tools.jpg',
+    food: imgTheme + '/food.jpg'
 }
 
 module.exports = [

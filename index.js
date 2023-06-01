@@ -1,11 +1,13 @@
+require('dotenv').config();
+
 // server.js
 const express = require('express');
 global.app = express();
 const path = require('path');
-const PORT = 3000;
 
+const PORT = 4000;
 const PATHS = new function() {
-  this.dist = path.resolve(process.env.distPath);
+  this.dist = path.resolve(process.env.DIST_PATH);
 }
 
 require('./backend.js');

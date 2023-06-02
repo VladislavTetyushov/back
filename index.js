@@ -3,12 +3,19 @@ require('dotenv').config();
 // server.js
 const express = require('express');
 global.app = express();
+const cors = require('cors');
 const path = require('path');
 
 const PORT = 4000;
 const PATHS = new function() {
   this.dist = path.resolve(process.env.DIST_PATH);
 }
+
+app.use(
+  cors({
+    origin: 'http://localhost:3000'
+  })
+);
 
 require('./backend.js');
 

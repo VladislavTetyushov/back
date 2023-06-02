@@ -1,18 +1,16 @@
-const express = require('express');
 const wordSets = require('./wordSets.js');
 const reviews = require('./reviews.js');
 let words = require('./words.js');
 
 //наборы слов
 
-app.get('/api/word-set', (req, res) => {
-    const wordset = req.query.wordset;
-    res.json(findWordSetByName(wordset));   
+app.get('/api/word-set',  (req, res) => {
+    const id = req.query.id;
+    res.json(findWordSetByName(id));
 });
 
 app.get('/api/word-sets', (req, res) => {
     const count = req.query.count;
-    console.log(typeof count);
     if (!count)
     {
         addWords();
@@ -66,20 +64,13 @@ function addWords() {
 //поиск ворд-сетов, слов
 
 function findWordSetByName(word) {
-    let result = [];
-    for (var i = 0; i < wordSets.length; i++) {
-        if (wordSets[i].id === word) {
-            result.push(
-                { 
-                    id: wordSets[i].id, 
-                    imgThemePath: wordSets[i].imgThemePath, 
-                    title: wordSets[i].title, 
-                    description: wordSets[i].description
-                }
-            );
-        }
+    const foundWordSet = wordSets.find(wordset => wordset.id === word)
+    return { 
+        id: foundWordSet.id, 
+        imgThemePath: foundWordSet.imgThemePath, 
+        title: foundWordSet.title, 
+        description: foundWordSet.description
     }
-    return result; 
 }
 
 function findWordByTheme(theme) {

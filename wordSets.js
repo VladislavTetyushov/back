@@ -1,4 +1,4 @@
-let imgTheme = 'assets/images/theme';
+let imgTheme = '/static/theme';
 
 let imgThemedata = {
     house: imgTheme + '/house.jpg',

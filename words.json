@@ -1,0 +1,1512 @@
+[
+    {
+        "word": "house",
+        "transcription": "[haus]",
+        "img": "/static/words/house.jpg",
+        "themes": [
+            "house"
+        ],
+        "translations": [
+            {
+                "translation": "дом",
+                "frequency": 75
+            },
+            {
+                "translation": "жилище",
+                "frequency": 10
+            },
+            {
+                "translation": "здание",
+                "frequency": 7
+            },
+            {
+                "translation": "театр",
+                "frequency": 5
+            },
+            {
+                "translation": "палата",
+                "frequency": 3
+            }
+        ]
+    },
+    {
+        "word": "apartment",
+        "transcription": "[ə’pɑːtmənt]",
+        "img": "/static/words/apartment.jpg",
+        "themes": [
+            "house"
+        ],
+        "translations": [
+            {
+                "translation": "квартира",
+                "frequency": 45
+            },
+            {
+                "translation": "апартамент",
+                "frequency": 45
+            },
+            {
+                "translation": "комната",
+                "frequency": 5
+            },
+            {
+                "translation": "помещение",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "room",
+        "transcription": "[ruːm]",
+        "img": "/static/words/room.jpg",
+        "themes": [
+            "house"
+        ],
+        "translations": [
+            {
+                "translation": "комната",
+                "frequency": 35
+            },
+            {
+                "translation": "номер",
+                "frequency": 35
+            },
+            {
+                "translation": "помещение",
+                "frequency": 15
+            },
+            {
+                "translation": "место",
+                "frequency": 10
+            },
+            {
+                "translation": "пространство",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "bathroom",
+        "transcription": "[‘bɑːθruːm]",
+        "img": "/static/words/bathroom.jpg",
+        "themes": [
+            "house"
+        ],
+        "translations": [
+            {
+                "translation": "ванная комната",
+                "frequency": 90
+            },
+            {
+                "translation": "туалет",
+                "frequency": 5
+            },
+            {
+                "translation": "уборная",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "balcony",
+        "transcription": "[‘bælkənɪ]",
+        "img": "/static/words/balcony.jpg",
+        "themes": [
+            "house"
+        ],
+        "translations": [
+            {
+                "translation": "балкон",
+                "frequency": 95
+            },
+            {
+                "translation": "лоджия",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "bedroom",
+        "transcription": "[‘bedruːm]",
+        "img": "/static/words/bedroom.jpg",
+        "themes": [
+            "house"
+        ],
+        "translations": [
+            {
+                "translation": "спальня",
+                "frequency": 90
+            },
+            {
+                "translation": "комната",
+                "frequency": 5
+            },
+            {
+                "translation": "кровать",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "closet",
+        "transcription": "[‘klɔzɪt]",
+        "img": "/static/words/closet.jpg",
+        "themes": [
+            "house"
+        ],
+        "translations": [
+            {
+                "translation": "шкаф",
+                "frequency": 45
+            },
+            {
+                "translation": "чулан",
+                "frequency": 40
+            },
+            {
+                "translation": "уборная",
+                "frequency": 5
+            },
+            {
+                "translation": "клозет",
+                "frequency": 5
+            },
+            {
+                "translation": "небольшой кабинет",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "dining room",
+        "transcription": "[‘daɪnɪŋˌrum]",
+        "img": "/static/words/dining_room.jpg",
+        "themes": [
+            "house"
+        ],
+        "translations": [
+            {
+                "translation": "столовая",
+                "frequency": 80
+            },
+            {
+                "translation": "обеденная комната",
+                "frequency": 10
+            },
+            {
+                "translation": "обеденный зал",
+                "frequency": 10
+            }
+        ]
+    },
+    {
+        "word": "doorbell",
+        "transcription": "[‘dɔːbel]",
+        "img": "/static/words/doorbell.jpg",
+        "themes": [
+            "house"
+        ],
+        "translations": [
+            {
+                "translation": "дверной звонок",
+                "frequency": 50
+            },
+            {
+                "translation": "домофон",
+                "frequency": 45
+            },
+            {
+                "translation": "звонок",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "upstairs",
+        "transcription": "[ʌp’steəz]",
+        "img": "/static/words/upstairs.jpg",
+        "themes": [
+            "house"
+        ],
+        "translations": [
+            {
+                "translation": "верхний этаж",
+                "frequency": 40
+            },
+            {
+                "translation": "вверх по лестнице",
+                "frequency": 40
+            },
+            {
+                "translation": "верхняя часть здания",
+                "frequency": 20
+            }
+        ]
+    },
+    {
+        "word": "downstairs",
+        "transcription": "[‘daun’steəz]",
+        "img": "/static/words/downstairs.jpg",
+        "themes": [
+            "house"
+        ],
+        "translations": [
+            {
+                "translation": "нижний этаж",
+                "frequency": 40
+            },
+            {
+                "translation": "вниз по лестнице",
+                "frequency": 40
+            },
+            {
+                "translation": "нижняя часть здания",
+                "frequency": 20
+            }
+        ]
+    },
+    {
+        "word": "roof",
+        "transcription": "[ruːf]",
+        "img": "/static/words/roof.jpg",
+        "themes": [
+            "house"
+        ],
+        "translations": [
+            {
+                "translation": "крыша",
+                "frequency": 65
+            },
+            {
+                "translation": "кровля",
+                "frequency": 15
+            },
+            {
+                "translation": "потолок",
+                "frequency": 10
+            },
+            {
+                "translation": "кровельный материал",
+                "frequency": 5
+            },
+            {
+                "translation": "максимальная цена",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "window",
+        "transcription": "[‘wɪndəu]",
+        "img": "/static/words/window.jpg",
+        "themes": [
+            "house"
+        ],
+        "translations": [
+            {
+                "translation": "окно",
+                "frequency": 70
+            },
+            {
+                "translation": "форточка",
+                "frequency": 20
+            },
+            {
+                "translation": "витрина",
+                "frequency": 5
+            },
+            {
+                "translation": "иллюминатор",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "fruit",
+        "transcription": "[fruːt]",
+        "img": "/static/words/fruit.jpg",
+        "themes": [
+            "fruits"
+        ],
+        "translations": [
+            {
+                "translation": "фрукты",
+                "frequency": 50
+            },
+            {
+                "translation": "плоды",
+                "frequency": 45
+            },
+            {
+                "translation": "результат",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "apricot",
+        "transcription": "[‘eɪprɪkɔt]",
+        "img": "/static/words/apricot.jpg",
+        "themes": [
+            "fruits"
+        ],
+        "translations": [
+            {
+                "translation": "абрикос",
+                "frequency": 75
+            },
+            {
+                "translation": "абрикосовый цвет",
+                "frequency": 20
+            },
+            {
+                "translation": "абрикосовое дерево",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "pineapple",
+        "transcription": "[‘paɪnæpl]",
+        "img": "/static/words/pineapple.jpg",
+        "themes": [
+            "fruits"
+        ],
+        "translations": [
+            {
+                "translation": "ананас",
+                "frequency": 90
+            },
+            {
+                "translation": "лимонка",
+                "frequency": 5
+            },
+            {
+                "translation": "ручная граната",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "banana",
+        "transcription": "[bə’nɑːnə]",
+        "img": "/static/words/banana.jpg",
+        "themes": [
+            "fruits"
+        ],
+        "translations": [
+            {
+                "translation": "банан",
+                "frequency": 100
+            }
+        ]
+    },
+    {
+        "word": "bergamot",
+        "transcription": "[‘bɜːgəmɔt]",
+        "img": "/static/words/bergamot.jpg",
+        "themes": [
+            "fruits"
+        ],
+        "translations": [
+            {
+                "translation": "бергамот",
+                "frequency": 100
+            }
+        ]
+    },
+    {
+        "word": "grape",
+        "transcription": "[greɪp]",
+        "img": "/static/words/grape.jpg",
+        "themes": [
+            "fruits"
+        ],
+        "translations": [
+            {
+                "translation": "виноград",
+                "frequency": 80
+            },
+            {
+                "translation": "вино",
+                "frequency": 10
+            },
+            {
+                "translation": "крупная картечь",
+                "frequency": 5
+            },
+            {
+                "translation": "флер",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "grapefruit",
+        "transcription": "[‘greɪpfruːt]",
+        "img": "/static/words/grapefruit.jpg",
+        "themes": [
+            "fruits"
+        ],
+        "translations": [
+            {
+                "translation": "грейпфрут",
+                "frequency": 100
+            }
+        ]
+    },
+    {
+        "word": "pear",
+        "transcription": "[peə]",
+        "img": "/static/words/pear.jpg",
+        "themes": [
+            "fruits"
+        ],
+        "translations": [
+            {
+                "translation": "груша",
+                "frequency": 80
+            },
+            {
+                "translation": "грушевое дерево",
+                "frequency": 20
+            }
+        ]
+    },
+    {
+        "word": "melon",
+        "transcription": "[‘melən]",
+        "img": "/static/words/melon.jpg",
+        "themes": [
+            "fruits"
+        ],
+        "translations": [
+            {
+                "translation": "дыня",
+                "frequency": 60
+            },
+            {
+                "translation": "арбуз",
+                "frequency": 45
+            },
+            {
+                "translation": "тантьема",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "lemon",
+        "transcription": "[‘lemən]",
+        "img": "/static/words/lemon.jpg",
+        "themes": [
+            "fruits"
+        ],
+        "translations": [
+            {
+                "translation": "лимон",
+                "frequency": 80
+            },
+            {
+                "translation": "лимонный цвет",
+                "frequency": 10
+            },
+            {
+                "translation": "негодная вещь",
+                "frequency": 5
+            },
+            {
+                "translation": "неприятный человек",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "mandarin",
+        "transcription": "[‘mænd(ə)rɪn]",
+        "img": "/static/words/mandarin.jpg",
+        "themes": [
+            "fruits"
+        ],
+        "translations": [
+            {
+                "translation": "мандарин",
+                "frequency": 80
+            },
+            {
+                "translation": "оранжевый цвет",
+                "frequency": 15
+            },
+            {
+                "translation": "косный руководитель",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "peach",
+        "transcription": "[piːʧ]",
+        "img": "/static/words/peach.jpg",
+        "themes": [
+            "fruits"
+        ],
+        "translations": [
+            {
+                "translation": "персик",
+                "frequency": 70
+            },
+            {
+                "translation": "персиковое дерево",
+                "frequency": 10
+            },
+            {
+                "translation": "персиковый цвет",
+                "frequency": 10
+            },
+            {
+                "translation": "первый сорт",
+                "frequency": 5
+            },
+            {
+                "translation": "красотка",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "plum",
+        "transcription": "[plʌm]",
+        "img": "/static/words/plum.jpg",
+        "themes": [
+            "fruits"
+        ],
+        "translations": [
+            {
+                "translation": "слива",
+                "frequency": 70
+            },
+            {
+                "translation": "сливовое дерево",
+                "frequency": 10
+            },
+            {
+                "translation": "выгодный заказ",
+                "frequency": 10
+            },
+            {
+                "translation": "лакомый кусочек",
+                "frequency": 5
+            },
+            {
+                "translation": "доходное место",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "apple",
+        "transcription": "[‘æpl]",
+        "img": "/static/words/apple.jpg",
+        "themes": [
+            "fruits"
+        ],
+        "translations": [
+            {
+                "translation": "яблоко",
+                "frequency": 65
+            },
+            {
+                "translation": "яблоня",
+                "frequency": 20
+            },
+            {
+                "translation": "чепуха",
+                "frequency": 10
+            },
+            {
+                "translation": "лесть",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "lime",
+        "transcription": "[laɪm]",
+        "img": "/static/words/lime.jpg",
+        "themes": [
+            "fruits"
+        ],
+        "translations": [
+            {
+                "translation": "лайм",
+                "frequency": 50
+            },
+            {
+                "translation": "известь",
+                "frequency": 40
+            },
+            {
+                "translation": "липа",
+                "frequency": 5
+            },
+            {
+                "translation": "лимон",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "flower",
+        "transcription": "[ˈflaʊə]",
+        "img": "/static/words/flower.jpg",
+        "themes": [
+            "flowers"
+        ],
+        "translations": [
+            {
+                "translation": "цветок",
+                "frequency": 55
+            },
+            {
+                "translation": "цвет",
+                "frequency": 35
+            },
+            {
+                "translation": "цветение",
+                "frequency": 5
+            },
+            {
+                "translation": "лучшая часть",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "rose",
+        "transcription": "[rəʊz]",
+        "img": "/static/words/rose.jpg",
+        "themes": [
+            "flowers"
+        ],
+        "translations": [
+            {
+                "translation": "роза",
+                "frequency": 70
+            },
+            {
+                "translation": "розовый цвет",
+                "frequency": 15
+            },
+            {
+                "translation": "разбрызгиватель",
+                "frequency": 5
+            },
+            {
+                "translation": "сетка",
+                "frequency": 5
+            },
+            {
+                "translation": "румянец",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "tulip",
+        "transcription": "[ˈtjuːlɪp]",
+        "img": "/static/words/tulip.jpg",
+        "themes": [
+            "flowers"
+        ],
+        "translations": [
+            {
+                "translation": "тюльпан",
+                "frequency": 100
+            }
+        ]
+    },
+    {
+        "word": "carnation",
+        "transcription": "[kɑːˈneɪʃ(ə)n]",
+        "img": "/static/words/carnation.jpg",
+        "themes": [
+            "flowers"
+        ],
+        "translations": [
+            {
+                "translation": "гвоздика",
+                "frequency": 75
+            },
+            {
+                "translation": "разные оттенки красноватых тонов",
+                "frequency": 15
+            },
+            {
+                "translation": "телесный цвет",
+                "frequency": 10
+            }
+        ]
+    },
+    {
+        "word": "gladiolus",
+        "transcription": "[ˈɡlædɪˈəʊləsɪz]",
+        "img": "/static/words/gladiolus.jpg",
+        "themes": [
+            "flowers"
+        ],
+        "translations": [
+            {
+                "translation": "гладиолус",
+                "frequency": 75
+            },
+            {
+                "translation": "шпажник",
+                "frequency": 15
+            }
+        ]
+    },
+    {
+        "word": "lily",
+        "transcription": "[ˈlɪlɪ]",
+        "img": "/static/words/lily.jpg",
+        "themes": [
+            "flowers"
+        ],
+        "translations": [
+            {
+                "translation": "лилия",
+                "frequency": 60
+            },
+            {
+                "translation": "кувшинка",
+                "frequency": 25
+            },
+            {
+                "translation": "ландыш",
+                "frequency": 15
+            }
+        ]
+    },
+    {
+        "word": "orchid",
+        "transcription": "[ˈɔːkɪd]",
+        "img": "/static/words/orchid.jpg",
+        "themes": [
+            "flowers"
+        ],
+        "translations": [
+            {
+                "translation": "орхидея",
+                "frequency": 75
+            },
+            {
+                "translation": "светло-лиловый цвет",
+                "frequency": 25
+            }
+        ]
+    },
+    {
+        "word": "peony",
+        "transcription": "[ˈpiːənɪ]",
+        "img": "/static/words/peony.jpg",
+        "themes": [
+            "flowers"
+        ],
+        "translations": [
+            {
+                "translation": "пион",
+                "frequency": 100
+            }
+        ]
+    },
+    {
+        "word": "daisy",
+        "transcription": "[ˈdeɪzɪ]",
+        "img": "/static/words/daisy.jpg",
+        "themes": [
+            "flowers"
+        ],
+        "translations": [
+            {
+                "translation": "маргаритка",
+                "frequency": 80
+            },
+            {
+                "translation": "нивяник обыкновенный",
+                "frequency": 10
+            },
+            {
+                "translation": "поповник",
+                "frequency": 5
+            },
+            {
+                "translation": "что-либо первоклассное",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "violet",
+        "transcription": "[ˈvaɪəlɪt]",
+        "img": "/static/words/violet.jpg",
+        "themes": [
+            "flowers"
+        ],
+        "translations": [
+            {
+                "translation": "фиалка",
+                "frequency": 45
+            },
+            {
+                "translation": "фиолетовый",
+                "frequency": 45
+            },
+            {
+                "translation": "лиловый",
+                "frequency": 10
+            }
+        ]
+    },
+    {
+        "word": "lotus",
+        "transcription": "[ˈləʊtəs]",
+        "img": "/static/words/lotus.jpg",
+        "themes": [
+            "flowers"
+        ],
+        "translations": [
+            {
+                "translation": "лотос",
+                "frequency": 100
+            }
+        ]
+    },
+    {
+        "word": "sunflower",
+        "transcription": "[ˈsʌnˌflaʊə]",
+        "img": "/static/words/sunflower.jpg",
+        "themes": [
+            "flowers"
+        ],
+        "translations": [
+            {
+                "translation": "подсолнух",
+                "frequency": 100
+            }
+        ]
+    },
+    {
+        "word": "dahlia",
+        "transcription": "[ˈdeɪljə]",
+        "img": "/static/words/dahlia.jpg",
+        "themes": [
+            "flowers"
+        ],
+        "translations": [
+            {
+                "translation": "георгина",
+                "frequency": 100
+            }
+        ]
+    },
+    {
+        "word": "dandelion",
+        "transcription": "[ˈdændɪlaɪən]",
+        "img": "/static/words/dandelion.jpg",
+        "themes": [
+            "flowers"
+        ],
+        "translations": [
+            {
+                "translation": "одуванчик",
+                "frequency": 100
+            }
+        ]
+    },
+    {
+        "word": "lavender",
+        "transcription": "[ˈlævɪndə]",
+        "img": "/static/words/lavender.jpg",
+        "themes": [
+            "flowers"
+        ],
+        "translations": [
+            {
+                "translation": "лаванда",
+                "frequency": 70
+            },
+            {
+                "translation": "бледно-лиловый цвет",
+                "frequency": 15
+            },
+            {
+                "translation": "высушенные листья лаванды",
+                "frequency": 15
+            }
+        ]
+    },
+    {
+        "word": "tool",
+        "transcription": "[tuːl]",
+        "img": "/static/words/tool.jpg",
+        "themes": [
+            "tools"
+        ],
+        "translations": [
+            {
+                "translation": "инструмент",
+                "frequency": 50
+            },
+            {
+                "translation": "орудие",
+                "frequency": 30
+            },
+            {
+                "translation": "резец",
+                "frequency": 10
+            },
+            {
+                "translation": "станок",
+                "frequency": 10
+            }
+        ]
+    },
+    {
+        "word": "hammer",
+        "transcription": "[‘hæmə]",
+        "img": "/static/words/hammer.jpg",
+        "themes": [
+            "tools"
+        ],
+        "translations": [
+            {
+                "translation": "молоток",
+                "frequency": 50
+            },
+            {
+                "translation": "молот",
+                "frequency": 30
+            },
+            {
+                "translation": "ударник",
+                "frequency": 10
+            },
+            {
+                "translation": "молоток аукциониста",
+                "frequency": 10
+            }
+        ]
+    },
+    {
+        "word": "handsaw",
+        "transcription": "[‘hæn(d)sɔː]",
+        "img": "/static/words/handsaw.jpg",
+        "themes": [
+            "tools"
+        ],
+        "translations": [
+            {
+                "translation": "ручная пила",
+                "frequency": 50
+            },
+            {
+                "translation": "ножовка",
+                "frequency": 50
+            }
+        ]
+    },
+    {
+        "word": "sandpaper",
+        "transcription": "[‘sæn(d)ˌpeɪpə]",
+        "img": "/static/words/sandpaper.jpg",
+        "themes": [
+            "tools"
+        ],
+        "translations": [
+            {
+                "translation": "наждачная бумага",
+                "frequency": 55
+            },
+            {
+                "translation": "шкурка",
+                "frequency": 35
+            },
+            {
+                "translation": "стеклянная бумага",
+                "frequency": 10
+            }
+        ]
+    },
+    {
+        "word": "drill",
+        "transcription": "[drɪl]",
+        "img": "/static/words/drill.jpg",
+        "themes": [
+            "tools"
+        ],
+        "translations": [
+            {
+                "translation": "дрель",
+                "frequency": 35
+            },
+            {
+                "translation": "сверло",
+                "frequency": 30
+            },
+            {
+                "translation": "бур",
+                "frequency": 20
+            },
+            {
+                "translation": "тренировка",
+                "frequency": 10
+            },
+            {
+                "translation": "муштра",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "vise",
+        "transcription": "[vaɪs]",
+        "img": "/static/words/vise.jpg",
+        "themes": [
+            "tools"
+        ],
+        "translations": [
+            {
+                "translation": "тиски",
+                "frequency": 50
+            },
+            {
+                "translation": "клещи",
+                "frequency": 35
+            },
+            {
+                "translation": "виза",
+                "frequency": 10
+            },
+            {
+                "translation": "зажимной патрон",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "screwdriver",
+        "transcription": "[‘skruːˌdraɪvə]",
+        "img": "/static/words/screwdriver.jpg",
+        "themes": [
+            "tools"
+        ],
+        "translations": [
+            {
+                "translation": "отвертка",
+                "frequency": 60
+            },
+            {
+                "translation": "шуруповерт",
+                "frequency": 30
+            },
+            {
+                "translation": "водка с апельсиновым соком и льдом",
+                "frequency": 10
+            }
+        ]
+    },
+    {
+        "word": "awl",
+        "transcription": "[ɔːl]",
+        "img": "/static/words/awl.jpg",
+        "themes": [
+            "tools"
+        ],
+        "translations": [
+            {
+                "translation": "шило",
+                "frequency": 100
+            }
+        ]
+    },
+    {
+        "word": "chisel",
+        "transcription": "[‘ʧɪz(ə)l]",
+        "img": "/static/words/chisel.jpg",
+        "themes": [
+            "tools"
+        ],
+        "translations": [
+            {
+                "translation": "зубило",
+                "frequency": 35
+            },
+            {
+                "translation": "долото",
+                "frequency": 25
+            },
+            {
+                "translation": "резец",
+                "frequency": 25
+            },
+            {
+                "translation": "стамеска",
+                "frequency": 10
+            },
+            {
+                "translation": "чекан",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "wrench",
+        "transcription": "[ren(t)ʃ]",
+        "img": "/static/words/wrench.jpg",
+        "themes": [
+            "tools"
+        ],
+        "translations": [
+            {
+                "translation": "гаечный ключ",
+                "frequency": 70
+            },
+            {
+                "translation": "щемящая тоска",
+                "frequency": 10
+            },
+            {
+                "translation": "вывих",
+                "frequency": 10
+            },
+            {
+                "translation": "искажение",
+                "frequency": 10
+            }
+        ]
+    },
+    {
+        "word": "pliers",
+        "transcription": "[‘plaɪəz]",
+        "img": "/static/words/pliers.jpg",
+        "themes": [
+            "tools"
+        ],
+        "translations": [
+            {
+                "translation": "плоскогубцы",
+                "frequency": 35
+            },
+            {
+                "translation": "клещи",
+                "frequency": 30
+            },
+            {
+                "translation": "щипцы",
+                "frequency": 25
+            },
+            {
+                "translation": "цанги",
+                "frequency": 10
+            }
+        ]
+    },
+    {
+        "word": "axe",
+        "transcription": "[æks]",
+        "img": "/static/words/axe.jpg",
+        "themes": [
+            "tools"
+        ],
+        "translations": [
+            {
+                "translation": "топор",
+                "frequency": 45
+            },
+            {
+                "translation": "топор",
+                "frequency": 25
+            },
+            {
+                "translation": "секира",
+                "frequency": 15
+            },
+            {
+                "translation": "колун",
+                "frequency": 10
+            },
+            {
+                "translation": "казнь",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "food",
+        "transcription": "[fuːd]",
+        "img": "/static/words/food.jpg",
+        "themes": [
+            "food"
+        ],
+        "translations": [
+            {
+                "translation": "еда",
+                "frequency": 35
+            },
+            {
+                "translation": "питание",
+                "frequency": 35
+            },
+            {
+                "translation": "пища",
+                "frequency": 15
+            },
+            {
+                "translation": "продовольствие",
+                "frequency": 10
+            },
+            {
+                "translation": "корм",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "ham",
+        "transcription": "[hæm]",
+        "img": "/static/words/ham.jpg",
+        "themes": [
+            "food"
+        ],
+        "translations": [
+            {
+                "translation": "ветчина",
+                "frequency": 35
+            },
+            {
+                "translation": "окорок",
+                "frequency": 30
+            },
+            {
+                "translation": "радиолюбитель",
+                "frequency": 20
+            },
+            {
+                "translation": "бедро",
+                "frequency": 10
+            },
+            {
+                "translation": "ляжка",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "sausage",
+        "transcription": "[‘sɔsɪʤ]",
+        "img": "/static/words/sausage.jpg",
+        "themes": [
+            "food"
+        ],
+        "translations": [
+            {
+                "translation": "колбаса",
+                "frequency": 40
+            },
+            {
+                "translation": "сосиска",
+                "frequency": 40
+            },
+            {
+                "translation": "сарделька",
+                "frequency": 20
+            }
+        ]
+    },
+    {
+        "word": "egg",
+        "transcription": "[eg]",
+        "img": "/static/words/egg.jpg",
+        "themes": [
+            "food"
+        ],
+        "translations": [
+            {
+                "translation": "яйцо",
+                "frequency": 60
+            },
+            {
+                "translation": "яйцеклетка",
+                "frequency": 30
+            },
+            {
+                "translation": "зародыш",
+                "frequency": 10
+            }
+        ]
+    },
+    {
+        "word": "pizza",
+        "transcription": "[‘piːtsə]",
+        "img": "/static/words/pizza.jpg",
+        "themes": [
+            "food"
+        ],
+        "translations": [
+            {
+                "translation": "пицца",
+                "frequency": 100
+            }
+        ]
+    },
+    {
+        "word": "soup",
+        "transcription": "[suːp]",
+        "img": "/static/words/soup.jpg",
+        "themes": [
+            "food"
+        ],
+        "translations": [
+            {
+                "translation": "суп",
+                "frequency": 60
+            },
+            {
+                "translation": "похлебка",
+                "frequency": 35
+            },
+            {
+                "translation": "густой туман",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "bread",
+        "transcription": "[bred]",
+        "img": "/static/words/bread.jpg",
+        "themes": [
+            "food"
+        ],
+        "translations": [
+            {
+                "translation": "хлеб",
+                "frequency": 80
+            },
+            {
+                "translation": "пища",
+                "frequency": 10
+            },
+            {
+                "translation": "деньги",
+                "frequency": 5
+            },
+            {
+                "translation": "средства к существованию",
+                "frequency": 5
+            }
+        ]
+    },
+    {
+        "word": "milk",
+        "transcription": "[mɪlk]",
+        "img": "/static/words/milk.jpg",
+        "themes": [
+            "food"
+        ],
+        "translations": [
+            {
+                "translation": "молоко",
+                "frequency": 80
+            },
+            {
+                "translation": "латекс",
+                "frequency": 20
+            }
+        ]
+    },
+    {
+        "word": "porridge",
+        "transcription": "[‘pɔrɪʤ]",
+        "img": "/static/words/porridge.jpg",
+        "themes": [
+            "food"
+        ],
+        "translations": [
+            {
+                "translation": "каша",
+                "frequency": 60
+            },
+            {
+                "translation": "овсяная каша",
+                "frequency": 30
+            },
+            {
+                "translation": "тюремное заключение",
+                "frequency": 10
+            }
+        ]
+    },
+    {
+        "word": "cookie",
+        "transcription": "[‘kukɪ]",
+        "img": "/static/words/cookie.jpg",
+        "themes": [
+            "food"
+        ],
+        "translations": [
+            {
+                "translation": "печенье",
+                "frequency": 80
+            },
+            {
+                "translation": "булочка",
+                "frequency": 20
+            }
+        ]
+    },
+    {
+        "word": "cocktail",
+        "transcription": "[‘kɔkteɪl]",
+        "img": "/static/words/cocktail.jpg",
+        "themes": [
+            "food"
+        ],
+        "translations": [
+            {
+                "translation": "коктейль",
+                "frequency": 80
+            },
+            {
+                "translation": "лошадь с подрезанным хвостом",
+                "frequency": 10
+            },
+            {
+                "translation": "выскочка",
+                "frequency": 10
+            }
+        ]
+    },
+    {
+        "word": "pie",
+        "transcription": "[paɪ]",
+        "img": "/static/words/pie.jpg",
+        "themes": [
+            "food"
+        ],
+        "translations": [
+            {
+                "translation": "пирог",
+                "frequency": 40
+            },
+            {
+                "translation": "торт",
+                "frequency": 30
+            },
+            {
+                "translation": "пирожок",
+                "frequency": 30
+            }
+        ]
+    }
+]

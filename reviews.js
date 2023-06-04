@@ -1,4 +1,4 @@
-let img = '/assets/images/people';
+let img = '/static/people';
 
 module.exports = [
     {

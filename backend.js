@@ -1,248 +1,297 @@
-const wordSets = require('./wordSets.js');
-const reviews = require('./reviews.js');
-let words = require('./words.json');
+const fns = require("date-fns");
+const _ = require("lodash");
+
+const wordSets = require("./wordSets.js");
+const reviews = require("./reviews.js");
+const words = require("./words.json");
+
+function getToday() {
+    return fns.format(new Date(), "P");
+}
+
+let today = getToday();
+setTimeout(() => {
+    today = getToday();
+    setInterval(() => {
+        today = getToday();
+    }, fns.hoursToMilliseconds(24));
+}, fns.startOfTomorrow().getTime() - Date());
 
 class Response {
     status;
     data;
     constructor(data) {
         this.status = Boolean(data);
-        this.data = data
+        this.data = data;
     }
 }
 
 //наборы слов
 
-app.get('/api/word-set',  (req, res) => {
-    const id = req.query.id || '';
-    res.json( new Response(findFullWordSet(id)) );
+app.get("/api/word-set", (req, res) => {
+    const id = req.query.id || "";
+    res.json(new Response(getWordSet(id)));
 });
 
-app.get('/api/word-sets', (req, res) => {
+app.get("/api/word-sets", (req, res) => {
     const count = req.query.count;
     if (!count) {
-        res.json(new Response(wordSets));  
+        res.json(new Response(wordSets));
     } else {
-        res.json( new Response(wordSets.slice(0, count)) );   
+        res.json(new Response(wordSets.slice(0, count)));
     }
 });
 
 // слово-дня
 
-app.get('/api/day-word', (req, res) => {
-    res.json(new Response(DayWord()));
+app.get("/api/day-word", (req, res) => {
+    res.json(new Response(getWordOfDay()));
 });
 
 //тренажеры
 
-app.get('/api/right-wrong', (req, res) => {
-    const wordset = req.query.wordset;
-    res.json(RightWrong(wordset));   
+app.get("/api/train", (req, res) => {
+    const id = req.query.id;
+    res.json(
+        new Response({
+            wordSet: getWordSet(id),
+            trainerData: rightWrong(id),
+        })
+    );
 });
 
-app.get('/api/en-ru', (req, res) => {
-    const wordset = req.query.wordset;
-    res.json(WordEnRu(wordset));   
+app.get("/api/train-en-ru", (req, res) => {
+    const id = req.query.id;
+    res.json(
+        new Response({
+            wordSet: getWordSet(id),
+            trainerData: enRu(id),
+        })
+    );
 });
 
-app.get('/api/ru-en', (req, res) => {
-    const wordset = req.query.wordset;
-    res.json(WordRuEn(wordset));   
+app.get("/api/train-ru-en", (req, res) => {
+    const id = req.query.id;
+    res.json(
+        new Response({
+            wordSet: getWordSet(id),
+            trainerData: ruEn(id),
+        })
+    );
 });
 
 // отзывы
 
-app.get('/api/reviews', (req, res) => {
+app.get("/api/reviews", (req, res) => {
     res.json(new Response(reviews));
 });
 
 // функции
 
-function findFullWordSet(id) {
-    const fullWordset = findShallowWordSet(id);
-    fullWordset.words = findWords(id);
-    return fullWordset
-}
-
 //поиск ворд-сетов, слов
 
-function findShallowWordSet(id) {
-    return wordSets.find(wordset => wordset.id === id)
-    // const foundWordSet = wordSets.find(wordset => wordset.id === word);
-    // if (foundWordSet) {
-    //     return { 
-    //         id: foundWordSet.id, 
-    //         imgThemePath: foundWordSet.imgThemePath, 
-    //         title: foundWordSet.title, 
-    //         description: foundWordSet.description
-    //     }
-    // }
+function getWordSet(id, isFull) {
+    const wordSet = wordSets.find((wordset) => wordset.id === id);
+    if (isFull && wordSet) {
+        wordSet.words = getWords(id);
+    }
+    return wordSet;
 }
 
-function findWords(wordSetId) {
+function getWords(wordSetId) {
     let result = [];
     for (let i = 0; i < words.length; i++) {
         const word = words[i];
         if (word.themes.includes(wordSetId)) {
-            result.push(
-                { 
-                    word: word.word, 
-                    translation: word.translations[0].translation, 
-                    transcription: word.transcription, 
-                    img: word.img
-                }
-            );
-        }    
+            result.push({
+                word: word.word,
+                translation: word.translations[0].translation,
+                transcription: word.transcription,
+                img: word.img,
+            });
+        }
     }
     return result;
+}
+
+function getRandomWord(isFull, wordSetId) {
+    let wordArray = words;
+    if (wordSetId) {
+        wordArray = getWords(wordSetId);
+    }
+    const randomIndex = Math.floor(Math.random() * wordArray.length);
+    const word = wordArray[randomIndex];
+    if (isFull) {
+        return word;
+    }
+    return {
+        word: word.word,
+        translation: word.translation,
+        transcription: word.transcription,
+        img: word.img,
+    };
 }
 
 //для тренажера верно-неверно
 
-function RightWrong (theme) {
-    let result = [];
-    let themeWords = findWords(theme);
+class TrainerRightWrongWord {
+    word;
+    visibleTranslation;
+    actualTranslation;
+    constructor(shallowWord, isCorrect) {
+        this.word = shallowWord.word;
+        this.actualTranslation = shallowWord.translation;
 
-    for (var i = 0; i < themeWords.length; i++) {
-        let randomIndex = Math.floor(Math.random() * words.length);
-        let randomWord = words[randomIndex];
-
-        // Генерируем случайное число от 0 до 1
-        let coinFlip = Math.random();
-        // Если случайное число меньше или равно 0.5 и объект верный, выполняем действия
-        if (coinFlip <= 0.5) {
-            result.push(
-                {   
-                    word: themeWords[i].word, 
-                    visibleTranslation: themeWords[i].translate, 
-                    actualTranslation: themeWords[i].translate
-                }
-            );
-            continue;
-        }
-
-        while (randomWord.word === themeWords[i].word) {
-            randomIndex = Math.floor(Math.random() * words.length);
-            randomWord = words[randomIndex];
-        }
-
-        result.push(
-            {
-                word: themeWords[i].word,
-                visibleTranslation: randomWord.translate[0].translate, 
-                actualTranslation: themeWords[i].translate
+        if (isCorrect) {
+            this.visibleTranslation = shallowWord.translation;
+        } else {
+            let randomWord = getRandomWord();
+            while (randomWord.word === shallowWord.word) {
+                randomWord = getRandomWord();
             }
-        );
+            this.visibleTranslation = randomWord.translation;
+        }
     }
-    return result;
 }
 
-// Для тренажера en-ru, ru-en 
-
-function WordEnRu (theme) {
+function rightWrong(wordSetId) {
     let result = [];
-    let themeWords = findWords(theme);
-    let optionsLength = 4;
+    let wordSetWords = getWords(wordSetId);
 
-    for (var i = 0; i < themeWords.length; i++) {
-    
-        let trueIndex = Math.floor(Math.random() * optionsLength);    
-        
-        result.push(
-            {
-                word: themeWords[i].word, 
-                transcription: themeWords[i].transcription, 
-                options: []
-            }
-        );
+    for (let i = 0; i < wordSetWords.length; i++) {
+        const currentWord = wordSetWords[i];
 
-        for (var j = 0; j < 5; j++) {
-
-            if (trueIndex === j) {
-                result[i].options.push(
-                    {
-                        translate: themeWords[i].translate, 
-                        isCorrect: true
-                    }
-                );
-                continue;
-            }
-
-            let falseIndex = Math.floor(Math.random() * words.length);
-            let randomWord = words[falseIndex];   
-
-            while (randomWord.word === themeWords[i].word || result[i].options.some(obj => obj.translate === randomWord.translate[0].translate)) {
-                randomIndex = Math.floor(Math.random() * words.length);
-                randomWord = words[randomIndex];
-            }
-
-            result[i].options.push(
-                {
-                    translate: randomWord.translate[0].translate, 
-                    isCorrect: false
-                }
-            );
+        // Бросаем монетку и с шансом correctTranslationChance записываем слово правильно. Если монетка упала не той стороной - записываем неправильно
+        const coinFlip = Math.random();
+        const correctTranslationChance = 0.5;
+        if (coinFlip <= correctTranslationChance) {
+            result.push(new TrainerRightWrongWord(currentWord, true));
+        } else {
+            result.push(new TrainerRightWrongWord(currentWord, false));
         }
     }
     return result;
 }
 
-function WordRuEn (theme) {
-    let result = [];
-    let themeWords = findWords(theme);
-    let optionsLength = 4;
+// Для тренажера en-ru, ru-en
 
-    for (var i = 0; i < themeWords.length; i++) {
-    
-        let trueIndex = Math.floor(Math.random() * optionsLength);    
-        
-        result.push(
-            {
-                word: themeWords[i].translate, 
-                options: []
+class TrainerEnRuWord {
+    word;
+    transcription;
+    img;
+    options = [];
+    constructor(trueWord, optionsLength) {
+        this.word = trueWord.word;
+        this.transcription = trueWord.transcription;
+        this.img = trueWord.img;
+
+        for (let i = 0; i < optionsLength - 1; i++) {
+            let option = {
+                word: getRandomWord().word,
+                isCorrect: false,
+            };
+            while (option.word === trueWord.word) {
+                option.word = getRandomWord().word;
             }
-        );
-
-        for (var j = 0; j < 5; j++) {
-
-            if (trueIndex === j) {
-                result[i].options.push(
-                    {
-                        translate: themeWords[i].word, 
-                        isCorrect: true
-                    }
-                );
-                continue;
-            }
-
-            let falseIndex = Math.floor(Math.random() * words.length);
-            let randomWord = words[falseIndex];   
-
-            while (randomWord.translate[0].translate === themeWords[i].translate || result[i].options.some(obj => obj.word === randomWord.word)) {
-                randomIndex = Math.floor(Math.random() * words.length);
-                randomWord = words[randomIndex];
-            }
-
-            result[i].options.push(
-                {
-                    translate: randomWord.word, 
-                    isCorrect: false
-                }
-            );
+            this.options.push(option);
         }
+        let randomIndex = Math.floor(Math.random() * optionsLength);
+        if (randomIndex < this.options.length) {
+            let savedWord = this.options[randomIndex];
+            this.options[randomIndex] = {
+                word: trueWord.translation,
+                isCorrect: true,
+            };
+            this.options.push(savedWord);
+        } else {
+            this.options.push({
+                word: trueWord.translation,
+                isCorrect: true,
+            });
+        }
+    }
+}
+
+function enRu(wordSetId) {
+    const wordSetWords = _.shuffle(getWords(wordSetId));
+    const optionsLength = 5;
+    const result = [];
+
+    for (let i = 0; i < wordSetWords.length; i++) {
+        let currentWord = wordSetWords[i];
+        result.push(new TrainerEnRuWord(currentWord, optionsLength));
+    }
+
+    // _.shuffle по умолчанию возвращает пустой массив, а мне нужно, чтобы при ошибке возвращалось falsy значение
+    if (result.length === 0) {
+        return undefined;
+    }
+    return result;
+}
+
+class TrainerRuEnWord {
+    word;
+    img;
+    options = [];
+    constructor(trueWord, optionsLength) {
+        this.word = trueWord.translation;
+        this.img = trueWord.img;
+
+        for (let i = 0; i < optionsLength - 1; i++) {
+            let option = {
+                word: getRandomWord().word,
+                isCorrect: false,
+            };
+            while (option.word === trueWord.word) {
+                option.word = getRandomWord().word;
+            }
+            this.options.push(option);
+        }
+        let randomIndex = Math.floor(Math.random() * optionsLength);
+        if (randomIndex < this.options.length) {
+            let savedWord = this.options[randomIndex];
+            this.options[randomIndex] = {
+                word: trueWord.word,
+                isCorrect: true,
+            };
+            this.options.push(savedWord);
+        } else {
+            this.options.push({
+                word: trueWord.word,
+                isCorrect: true,
+            });
+        }
+    }
+}
+
+function ruEn(wordSetId) {
+    const wordSetWords = _.shuffle(getWords(wordSetId));
+    const optionsLength = 5;
+    const result = [];
+
+    for (let i = 0; i < wordSetWords.length; i++) {
+        let currentWord = wordSetWords[i];
+        result.push(new TrainerRuEnWord(currentWord, optionsLength));
+    }
+
+    // _.shuffle по умолчанию возвращает пустой массив, а мне нужно, чтобы при ошибке возвращалось falsy значение
+    if (result.length === 0) {
+        return undefined;
     }
     return result;
 }
 
 // для слово-дня
 
-function DayWord () {
-    let wordIndex = Math.floor(Math.random() * words.length);
-    // let randomWord = 
-        // { 
-        //     word: words[WordIndex].word, 
-        //     transcription: words[WordIndex].transcription, 
-        //     translations: words[WordIndex].translations
-        // }; 
-    return words[wordIndex];
+let lastDate;
+let cachedResponse;
+function getWordOfDay() {
+    if (lastDate === today) {
+        return cachedResponse;
+    }
+    let randomWordIndex = Math.floor(Math.random() * words.length);
+    lastDate = today;
+    cachedResponse = words[randomWordIndex];
+
+    return cachedResponse;
 }

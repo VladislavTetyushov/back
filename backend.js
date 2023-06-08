@@ -30,7 +30,8 @@ class Response {
 
 app.get("/api/word-set", (req, res) => {
     const id = req.query.id || "";
-    res.json(new Response(getWordSet(id)));
+    const isFull = req.query.full || false;
+    res.json(new Response(getWordSet(id, isFull)));
 });
 
 app.get("/api/word-sets", (req, res) => {
@@ -44,7 +45,7 @@ app.get("/api/word-sets", (req, res) => {
 
 // слово-дня
 
-app.get("/api/day-word", (req, res) => {
+app.get("/api/word-of-day", (req, res) => {
     res.json(new Response(getWordOfDay()));
 });
 
@@ -114,19 +115,19 @@ function getWords(wordSetId) {
     return result;
 }
 
-function getRandomWord(isFull, wordSetId) {
-    let wordArray = words;
-    if (wordSetId) {
-        wordArray = getWords(wordSetId);
+function getRandomWord(isFull, wordsArray) {
+    if (!wordsArray) {
+        wordsArray = words;
     }
-    const randomIndex = Math.floor(Math.random() * wordArray.length);
-    const word = wordArray[randomIndex];
+    const randomIndex = Math.floor(Math.random() * wordsArray.length);
+    const word = wordsArray[randomIndex];
+
     if (isFull) {
         return word;
     }
     return {
         word: word.word,
-        translation: word.translation,
+        translation: word.translations[0].translation,
         transcription: word.transcription,
         img: word.img,
     };
@@ -187,14 +188,16 @@ class TrainerEnRuWord {
 
         for (let i = 0; i < optionsLength - 1; i++) {
             let option = {
-                word: getRandomWord().word,
+                word: getRandomWord().translation,
                 isCorrect: false,
             };
-            while (option.word === trueWord.word) {
+            while (option.word === trueWord.translation) {
                 option.word = getRandomWord().word;
             }
             this.options.push(option);
         }
+
+        // Помещаем правильное слово в случайную позицию
         let randomIndex = Math.floor(Math.random() * optionsLength);
         if (randomIndex < this.options.length) {
             let savedWord = this.options[randomIndex];

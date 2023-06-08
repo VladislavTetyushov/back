@@ -6,6 +6,7 @@
             "#models/*": ["./models/*"],
             "#controllers/*": ["./controllers/*"],
             "#routes/*": ["./routes/*"]
-        }
+        },
+        "resolveJsonModule": true
     }
 }

@@ -63,6 +63,12 @@
 
 // // отзывы
 
-const reviewsController = require("#controllers/reviewsController.js");
+const express = require("express");
+const router = express.Router();
 
-global.app.get("/api/reviews", reviewsController.get);
+const reviewsController = require("#controllers/reviewsController.js");
+const wordOfDayController = require("#controllers/wordOfDayController.js");
+
+router.get("/api/reviews", reviewsController.get);
+
+exports = router;

@@ -2,7 +2,7 @@ const base = require("#controllers/baseController.js");
 const Review = require("#models/reviews.js");
 
 module.exports.get = (req, res) => {
-    res.json(new base.Response(review.getAll()));
+    res.json(new base.Response(Review.getAll()));
 };
 
 // module.exports.post = (req, res) => {

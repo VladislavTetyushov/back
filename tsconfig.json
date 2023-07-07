@@ -32,6 +32,7 @@
         // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
         "baseUrl": "./src",
         "paths": {
+            "@root/*": ["./*"],
             "@data/*": ["data/*"],
             "@models/*": ["models/*"],
             "@controllers/*": ["controllers/*"],
@@ -113,7 +114,7 @@
         // "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
         "skipLibCheck": true /* Skip type checking all .d.ts files. */
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "**/*.d.ts"],
     "exclude": ["node_modules"],
     "ts-node": {
         "esm": true

@@ -19,10 +19,6 @@ import path from "path";
 //     reviews.push(this);
 // }
 
-function getAll() {
+export function getAll() {
     return reviews;
 }
-
-export default {
-    getAll,
-};

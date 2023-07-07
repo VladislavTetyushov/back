@@ -1,9 +1,9 @@
-import { ResponseJson } from "@controllers/controllerBase.js";
-import reviews from "@models/reviews.js";
-
 import type { Request, Response } from "express";
 
-function get(req: Request, res: Response) {
+import { ResponseJson } from "@controllers/controllerBase.js";
+import * as reviews from "@models/reviews.js";
+
+export function getAllReviews(req: Request, res: Response) {
     res.json(
         new ResponseJson({
             data: reviews.getAll(),
@@ -20,7 +20,3 @@ function get(req: Request, res: Response) {
 //         message: "Sucessfully posted review",
 //     });
 // };
-
-export default {
-    get,
-};

@@ -1,143 +1,37 @@
-const fns = require("date-fns");
-const _ = require("lodash");
-const express = require("express");
+import type {
+    IWordSet,
+    IWordFull,
+    IWordShallow,
+    ITrainerOption,
+} from "@root/types.js";
 
-const wordSets = require("./wordSets.js");
-const reviews = require("./reviews.js");
-const words = require("./words.json");
+import dataWordSets from "@data/dataWordSets.json";
+import dataWords from "@data/dataWords.json";
+import _ from "lodash";
 
-function getToday() {
-    return fns.format(new Date(), "P");
-}
-
-let today = getToday();
-setTimeout(() => {
-    today = getToday();
-    setInterval(() => {
-        today = getToday();
-    }, fns.hoursToMilliseconds(24));
-}, fns.startOfTomorrow().getTime() - Date());
-
-class Response {
-    status;
-    message;
-    data;
-    constructor({ status, message, data }) {
-        if (typeof status === "boolean") {
-            this.status = status;
-        } else {
-            this.status = Boolean(data);
-        }
-        this.data = data;
-        this.message = message;
-    }
-}
-
-//наборы слов
-
-app.get("/api/word-set", (req, res) => {
-    const id = req.query.id || "";
-    const isFull = req.query.full || false;
-    res.json(
-        new Response({
-            data: getWordSet(id, isFull),
-        })
-    );
-});
-
-app.get("/api/word-sets", (req, res) => {
-    const count = req.query.count;
-    if (!count) {
-        res.json(
-            new Response({
-                data: wordSets,
-            })
-        );
-    } else {
-        res.json(
-            new Response({
-                data: wordSets.slice(0, count),
-            })
-        );
-    }
-});
-
-// слово-дня
-
-app.get("/api/word-of-day", (req, res) => {
-    res.json(
-        new Response({
-            data: getWordOfDay(),
-        })
-    );
-});
-
-//тренажеры
-
-app.get("/api/train", (req, res) => {
-    const id = req.query.id;
-    res.json(
-        new Response({
-            data: {
-                wordSet: getWordSet(id),
-                trainerData: rightWrong(id),
-            },
-        })
-    );
-});
-
-app.get("/api/train-en-ru", (req, res) => {
-    const id = req.query.id;
-    // new Response({
-    //     data: {
-    //         wordSet: getWordSet(id),
-    //         trainerData: enRu(id),
-    //     },
-    // })
-    res.json(
-        new Response({
-            data: enRu(id),
-        })
-    );
-});
-
-app.get("/api/train-ru-en", (req, res) => {
-    const id = req.query.id;
-    // new Response({
-    //     data: {
-    //         wordSet: getWordSet(id),
-    //         trainerData: ruEn(id),
-    //     },
-    // })
-    res.json(
-        new Response({
-            data: ruEn(id),
-        })
-    );
-});
-
-// отзывы
-
-app.get("/api/reviews", (req, res) => {
-    res.json(new Response({ data: reviews }));
-});
-
-// функции
-
-//поиск ворд-сетов, слов
-
-function getWordSet(id, isFull) {
-    const wordSet = wordSets.find((wordset) => wordset.id === id);
+export function getWordSet(id: string, isFull?: boolean) {
+    const wordSet = dataWordSets.find((wordset) => wordset.id === id);
     if (isFull && wordSet) {
-        wordSet.words = getWords(id);
+        return {
+            ...wordSet,
+            words: getWords(id),
+        };
     }
     return wordSet;
 }
 
-function getWords(wordSetId) {
+export function getWordSets(count?: number) {
+    if (typeof count === "number") {
+        return dataWordSets;
+    } else {
+        return dataWordSets.slice(0, count);
+    }
+}
+
+export function getWords(wordSetId: string) {
     let result = [];
-    for (let i = 0; i < words.length; i++) {
-        const word = words[i];
+    for (let i = 0; i < dataWords.length; i++) {
+        const word = dataWords[i];
         if (word.themes.includes(wordSetId)) {
             result.push({
                 word: word.word,
@@ -150,9 +44,10 @@ function getWords(wordSetId) {
     return result;
 }
 
-function getRandomWord(isFull, wordsArray) {
+export function getRandomWord(): IWordShallow;
+export function getRandomWord(isFull?: boolean, wordsArray?: IWordFull[]) {
     if (!wordsArray) {
-        wordsArray = words;
+        wordsArray = dataWords;
     }
     const randomIndex = Math.floor(Math.random() * wordsArray.length);
     const word = wordsArray[randomIndex];
@@ -171,10 +66,10 @@ function getRandomWord(isFull, wordsArray) {
 //для тренажера верно-неверно
 
 class TrainerRightWrongWord {
-    word;
-    visibleTranslation;
-    actualTranslation;
-    constructor(shallowWord, isCorrect) {
+    word: string;
+    visibleTranslation: string;
+    actualTranslation: string;
+    constructor(shallowWord: IWordShallow, isCorrect: boolean) {
         this.word = shallowWord.word;
         this.actualTranslation = shallowWord.translation;
 
@@ -190,7 +85,7 @@ class TrainerRightWrongWord {
     }
 }
 
-function rightWrong(wordSetId) {
+export function rightWrong(wordSetId: string) {
     let result = [];
     let wordSetWords = getWords(wordSetId);
 
@@ -212,11 +107,11 @@ function rightWrong(wordSetId) {
 // Для тренажера en-ru, ru-en
 
 class TrainerEnRuWord {
-    word;
-    transcription;
-    img;
-    options = [];
-    constructor(trueWord, optionsLength) {
+    word: string;
+    transcription: string;
+    img: string;
+    options: ITrainerOption[] = [];
+    constructor(trueWord: IWordShallow, optionsLength: number) {
         this.word = trueWord.word;
         this.transcription = trueWord.transcription;
         this.img = trueWord.img;
@@ -250,7 +145,7 @@ class TrainerEnRuWord {
     }
 }
 
-function enRu(wordSetId) {
+export function enRu(wordSetId: string) {
     const wordSetWords = _.shuffle(getWords(wordSetId));
     const optionsLength = 5;
     const result = [];
@@ -270,10 +165,11 @@ function enRu(wordSetId) {
 class TrainerRuEnWord {
     word;
     img;
-    options = [];
-    constructor(trueWord, optionsLength) {
+    options: ITrainerOption[] = [];
+    constructor(trueWord: IWordShallow, optionsLength: number) {
         this.word = trueWord.translation;
         this.img = trueWord.img;
+        this.options = [];
 
         for (let i = 0; i < optionsLength - 1; i++) {
             let option = {
@@ -302,7 +198,7 @@ class TrainerRuEnWord {
     }
 }
 
-function ruEn(wordSetId) {
+export function ruEn(wordSetId: string) {
     const wordSetWords = _.shuffle(getWords(wordSetId));
     const optionsLength = 5;
     const result = [];
@@ -318,71 +214,3 @@ function ruEn(wordSetId) {
     }
     return result;
 }
-
-// для слово-дня
-
-let lastDate;
-let cachedResponse;
-function getWordOfDay() {
-    if (lastDate === today) {
-        return cachedResponse;
-    }
-    let randomWordIndex = Math.floor(Math.random() * words.length);
-    lastDate = today;
-    cachedResponse = words[randomWordIndex];
-
-    return cachedResponse;
-}
-
-let feedback;
-app.post("/api/feedback", express.json(), (req, res) => {
-    // function validate(req) {
-    //     return req.body?.name.length > 5;
-    // }
-
-    // if (!validate(req)) {
-    //     res.json(
-    //         new Response({
-    //             status: false,
-    //             message: "Имя слишком короткое, должно быть больше 5 символов",
-    //         })
-    //     );
-    //     return;
-    // }
-
-    feedback = req.body;
-    res.json(
-        new Response({
-            message: "Ваше сообщение зарегистрировано",
-            data: req.body,
-        })
-    );
-});
-
-app.post("/api/login", express.json(), (req, res) => {
-    let responseData = req.body;
-
-    responseData.token = "abcdef";
-
-    res.json(
-        new Response({
-            status: true,
-            message: "Авторизация прошла успешно",
-            data: responseData,
-        })
-    );
-});
-
-app.post("/api/register", express.json(), (req, res) => {
-    let responseData = req.body;
-
-    responseData.token = "abcdef";
-
-    res.json(
-        new Response({
-            status: true,
-            message: "Регистрация прошла успешно",
-            data: responseData,
-        })
-    );
-});

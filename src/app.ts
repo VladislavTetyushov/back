@@ -21,6 +21,10 @@ const PATHS = {
     controllers: path.resolve(__dirname, "controllers"),
     routes: path.resolve(__dirname, "routes"),
 };
+global.APP_PATHS = PATHS;
+declare global {
+    var APP_PATHS: typeof PATHS;
+}
 
 app.use(
     cors({
@@ -28,9 +32,9 @@ app.use(
     })
 );
 
-// import "./backend.js";
-import apiRouter from "@routes/routesApi.js";
-app.use(apiRouter);
+import routesApi from "@routes/routesApi.js";
+routesApi.use(express.json());
+app.use(routesApi);
 
 app.use("/resources", express.static(PATHS.resources));
 app.use(express.static(PATHS.static));

@@ -33,7 +33,6 @@ app.use(
 );
 
 import routesApi from "@routes/routesApi.js";
-routesApi.use(express.json());
 app.use(routesApi);
 
 app.use("/resources", express.static(PATHS.resources));

@@ -13,8 +13,8 @@ function validateFeedback(entry: unknown): entry is FeedbackEntry {
         "message" in entry &&
         typeof entry.name === "string" &&
         typeof entry.message === "string" &&
-        entry.name.length > 5 &&
-        entry.message.length > 5
+        entry.name.length > 1 &&
+        entry.message.length > 3
     );
 }
 
@@ -26,7 +26,7 @@ export function feedbackPost(req: Request, res: Response) {
                 status: false,
                 message:
                     "Ваше сообщение не соответствует требованиям, указанным в форме отправки",
-                data: req.body,
+                data: body,
             })
         );
         return;
@@ -38,7 +38,7 @@ export function feedbackPost(req: Request, res: Response) {
         new ResponseJson({
             status: true,
             message: "Ваше сообщение зарегистрировано",
-            data: req.body,
+            data: body,
         })
     );
 }

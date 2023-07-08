@@ -119,6 +119,7 @@ export type TrainerData = {
 
 export type FeedbackEntry = {
     name: string;
+    email: string;
     subject?: string;
     message: string;
 };

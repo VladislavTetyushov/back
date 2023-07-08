@@ -6,13 +6,11 @@ import { FeedbackEntry } from "@root/types.js";
 let feedback: FeedbackEntry[];
 
 export function readFeedback() {
-    feedback = JSON.parse(
-        String(
-            fs.readFileSync(
-                path.join(global.APP_PATHS.data, "dataFeedback.json")
-            )
-        )
-    );
+    let feedbackPath = path.join(global.APP_PATHS.data, "dataFeedback.json");
+    if (!fs.existsSync(feedbackPath)) {
+        fs.writeFileSync(feedbackPath, JSON.stringify([]));
+    }
+    feedback = JSON.parse(String(fs.readFileSync(feedbackPath)));
 }
 
 export function getAllFeedback() {
@@ -28,6 +26,7 @@ export function saveFeedback(entry: FeedbackEntry) {
     let toSave: FeedbackEntry = {
         name: entry.name,
         message: entry.message,
+        email: entry.email,
     };
     if (entry.subject) {
         toSave.subject = entry.subject;
@@ -36,11 +35,10 @@ export function saveFeedback(entry: FeedbackEntry) {
 }
 
 export function saveToJson() {
-    // fs.writeFileSync(
-    //     path.join(global.APP_PATHS.data, "dataFeedback.json"),
-    //     JSON.stringify(feedback)
-    // );
-    console.log(JSON.stringify(feedback));
+    fs.writeFileSync(
+        path.join(global.APP_PATHS.data, "dataFeedback.json"),
+        JSON.stringify(feedback)
+    );
 }
 
 readFeedback();

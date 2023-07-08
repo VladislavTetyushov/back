@@ -2,10 +2,8 @@
     {
         "word": "house",
         "transcription": "[haus]",
-        "img": "/static/words/house.jpg",
-        "themes": [
-            "house"
-        ],
+        "img": "/resources/words/house.jpg",
+        "themes": ["house"],
         "translations": [
             {
                 "translation": "дом",
@@ -32,10 +30,8 @@
     {
         "word": "apartment",
         "transcription": "[ə’pɑːtmənt]",
-        "img": "/static/words/apartment.jpg",
-        "themes": [
-            "house"
-        ],
+        "img": "/resources/words/apartment.jpg",
+        "themes": ["house"],
         "translations": [
             {
                 "translation": "квартира",
@@ -58,10 +54,8 @@
     {
         "word": "room",
         "transcription": "[ruːm]",
-        "img": "/static/words/room.jpg",
-        "themes": [
-            "house"
-        ],
+        "img": "/resources/words/room.jpg",
+        "themes": ["house"],
         "translations": [
             {
                 "translation": "комната",
@@ -88,10 +82,8 @@
     {
         "word": "bathroom",
         "transcription": "[‘bɑːθruːm]",
-        "img": "/static/words/bathroom.jpg",
-        "themes": [
-            "house"
-        ],
+        "img": "/resources/words/bathroom.jpg",
+        "themes": ["house"],
         "translations": [
             {
                 "translation": "ванная комната",
@@ -110,10 +102,8 @@
     {
         "word": "balcony",
         "transcription": "[‘bælkənɪ]",
-        "img": "/static/words/balcony.jpg",
-        "themes": [
-            "house"
-        ],
+        "img": "/resources/words/balcony.jpg",
+        "themes": ["house"],
         "translations": [
             {
                 "translation": "балкон",
@@ -128,10 +118,8 @@
     {
         "word": "bedroom",
         "transcription": "[‘bedruːm]",
-        "img": "/static/words/bedroom.jpg",
-        "themes": [
-            "house"
-        ],
+        "img": "/resources/words/bedroom.jpg",
+        "themes": ["house"],
         "translations": [
             {
                 "translation": "спальня",
@@ -150,10 +138,8 @@
     {
         "word": "closet",
         "transcription": "[‘klɔzɪt]",
-        "img": "/static/words/closet.jpg",
-        "themes": [
-            "house"
-        ],
+        "img": "/resources/words/closet.jpg",
+        "themes": ["house"],
         "translations": [
             {
                 "translation": "шкаф",
@@ -180,10 +166,8 @@
     {
         "word": "dining room",
         "transcription": "[‘daɪnɪŋˌrum]",
-        "img": "/static/words/dining_room.jpg",
-        "themes": [
-            "house"
-        ],
+        "img": "/resources/words/dining_room.jpg",
+        "themes": ["house"],
         "translations": [
             {
                 "translation": "столовая",
@@ -202,10 +186,8 @@
     {
         "word": "doorbell",
         "transcription": "[‘dɔːbel]",
-        "img": "/static/words/doorbell.jpg",
-        "themes": [
-            "house"
-        ],
+        "img": "/resources/words/doorbell.jpg",
+        "themes": ["house"],
         "translations": [
             {
                 "translation": "дверной звонок",
@@ -224,10 +206,8 @@
     {
         "word": "upstairs",
         "transcription": "[ʌp’steəz]",
-        "img": "/static/words/upstairs.jpg",
-        "themes": [
-            "house"
-        ],
+        "img": "/resources/words/upstairs.jpg",
+        "themes": ["house"],
         "translations": [
             {
                 "translation": "верхний этаж",
@@ -246,10 +226,8 @@
     {
         "word": "downstairs",
         "transcription": "[‘daun’steəz]",
-        "img": "/static/words/downstairs.jpg",
-        "themes": [
-            "house"
-        ],
+        "img": "/resources/words/downstairs.jpg",
+        "themes": ["house"],
         "translations": [
             {
                 "translation": "нижний этаж",
@@ -268,10 +246,8 @@
     {
         "word": "roof",
         "transcription": "[ruːf]",
-        "img": "/static/words/roof.jpg",
-        "themes": [
-            "house"
-        ],
+        "img": "/resources/words/roof.jpg",
+        "themes": ["house"],
         "translations": [
             {
                 "translation": "крыша",
@@ -298,10 +274,8 @@
     {
         "word": "window",
         "transcription": "[‘wɪndəu]",
-        "img": "/static/words/window.jpg",
-        "themes": [
-            "house"
-        ],
+        "img": "/resources/words/window.jpg",
+        "themes": ["house"],
         "translations": [
             {
                 "translation": "окно",
@@ -324,10 +298,8 @@
     {
         "word": "fruit",
         "transcription": "[fruːt]",
-        "img": "/static/words/fruit.jpg",
-        "themes": [
-            "fruits"
-        ],
+        "img": "/resources/words/fruit.jpg",
+        "themes": ["fruits"],
         "translations": [
             {
                 "translation": "фрукты",
@@ -346,10 +318,8 @@
     {
         "word": "apricot",
         "transcription": "[‘eɪprɪkɔt]",
-        "img": "/static/words/apricot.jpg",
-        "themes": [
-            "fruits"
-        ],
+        "img": "/resources/words/apricot.jpg",
+        "themes": ["fruits"],
         "translations": [
             {
                 "translation": "абрикос",
@@ -368,10 +338,8 @@
     {
         "word": "pineapple",
         "transcription": "[‘paɪnæpl]",
-        "img": "/static/words/pineapple.jpg",
-        "themes": [
-            "fruits"
-        ],
+        "img": "/resources/words/pineapple.jpg",
+        "themes": ["fruits"],
         "translations": [
             {
                 "translation": "ананас",
@@ -390,10 +358,8 @@
     {
         "word": "banana",
         "transcription": "[bə’nɑːnə]",
-        "img": "/static/words/banana.jpg",
-        "themes": [
-            "fruits"
-        ],
+        "img": "/resources/words/banana.jpg",
+        "themes": ["fruits"],
         "translations": [
             {
                 "translation": "банан",
@@ -404,10 +370,8 @@
     {
         "word": "bergamot",
         "transcription": "[‘bɜːgəmɔt]",
-        "img": "/static/words/bergamot.jpg",
-        "themes": [
-            "fruits"
-        ],
+        "img": "/resources/words/bergamot.jpg",
+        "themes": ["fruits"],
         "translations": [
             {
                 "translation": "бергамот",
@@ -418,10 +382,8 @@
     {
         "word": "grape",
         "transcription": "[greɪp]",
-        "img": "/static/words/grape.jpg",
-        "themes": [
-            "fruits"
-        ],
+        "img": "/resources/words/grape.jpg",
+        "themes": ["fruits"],
         "translations": [
             {
                 "translation": "виноград",
@@ -444,10 +406,8 @@
     {
         "word": "grapefruit",
         "transcription": "[‘greɪpfruːt]",
-        "img": "/static/words/grapefruit.jpg",
-        "themes": [
-            "fruits"
-        ],
+        "img": "/resources/words/grapefruit.jpg",
+        "themes": ["fruits"],
         "translations": [
             {
                 "translation": "грейпфрут",
@@ -458,10 +418,8 @@
     {
         "word": "pear",
         "transcription": "[peə]",
-        "img": "/static/words/pear.jpg",
-        "themes": [
-            "fruits"
-        ],
+        "img": "/resources/words/pear.jpg",
+        "themes": ["fruits"],
         "translations": [
             {
                 "translation": "груша",
@@ -476,10 +434,8 @@
     {
         "word": "melon",
         "transcription": "[‘melən]",
-        "img": "/static/words/melon.jpg",
-        "themes": [
-            "fruits"
-        ],
+        "img": "/resources/words/melon.jpg",
+        "themes": ["fruits"],
         "translations": [
             {
                 "translation": "дыня",
@@ -498,10 +454,8 @@
     {
         "word": "lemon",
         "transcription": "[‘lemən]",
-        "img": "/static/words/lemon.jpg",
-        "themes": [
-            "fruits"
-        ],
+        "img": "/resources/words/lemon.jpg",
+        "themes": ["fruits"],
         "translations": [
             {
                 "translation": "лимон",
@@ -524,10 +478,8 @@
     {
         "word": "mandarin",
         "transcription": "[‘mænd(ə)rɪn]",
-        "img": "/static/words/mandarin.jpg",
-        "themes": [
-            "fruits"
-        ],
+        "img": "/resources/words/mandarin.jpg",
+        "themes": ["fruits"],
         "translations": [
             {
                 "translation": "мандарин",
@@ -546,10 +498,8 @@
     {
         "word": "peach",
         "transcription": "[piːʧ]",
-        "img": "/static/words/peach.jpg",
-        "themes": [
-            "fruits"
-        ],
+        "img": "/resources/words/peach.jpg",
+        "themes": ["fruits"],
         "translations": [
             {
                 "translation": "персик",
@@ -576,10 +526,8 @@
     {
         "word": "plum",
         "transcription": "[plʌm]",
-        "img": "/static/words/plum.jpg",
-        "themes": [
-            "fruits"
-        ],
+        "img": "/resources/words/plum.jpg",
+        "themes": ["fruits"],
         "translations": [
             {
                 "translation": "слива",
@@ -606,10 +554,8 @@
     {
         "word": "apple",
         "transcription": "[‘æpl]",
-        "img": "/static/words/apple.jpg",
-        "themes": [
-            "fruits"
-        ],
+        "img": "/resources/words/apple.jpg",
+        "themes": ["fruits"],
         "translations": [
             {
                 "translation": "яблоко",
@@ -632,10 +578,8 @@
     {
         "word": "lime",
         "transcription": "[laɪm]",
-        "img": "/static/words/lime.jpg",
-        "themes": [
-            "fruits"
-        ],
+        "img": "/resources/words/lime.jpg",
+        "themes": ["fruits"],
         "translations": [
             {
                 "translation": "лайм",
@@ -658,10 +602,8 @@
     {
         "word": "flower",
         "transcription": "[ˈflaʊə]",
-        "img": "/static/words/flower.jpg",
-        "themes": [
-            "flowers"
-        ],
+        "img": "/resources/words/flower.jpg",
+        "themes": ["flowers"],
         "translations": [
             {
                 "translation": "цветок",
@@ -684,10 +626,8 @@
     {
         "word": "rose",
         "transcription": "[rəʊz]",
-        "img": "/static/words/rose.jpg",
-        "themes": [
-            "flowers"
-        ],
+        "img": "/resources/words/rose.jpg",
+        "themes": ["flowers"],
         "translations": [
             {
                 "translation": "роза",
@@ -714,10 +654,8 @@
     {
         "word": "tulip",
         "transcription": "[ˈtjuːlɪp]",
-        "img": "/static/words/tulip.jpg",
-        "themes": [
-            "flowers"
-        ],
+        "img": "/resources/words/tulip.jpg",
+        "themes": ["flowers"],
         "translations": [
             {
                 "translation": "тюльпан",
@@ -728,10 +666,8 @@
     {
         "word": "carnation",
         "transcription": "[kɑːˈneɪʃ(ə)n]",
-        "img": "/static/words/carnation.jpg",
-        "themes": [
-            "flowers"
-        ],
+        "img": "/resources/words/carnation.jpg",
+        "themes": ["flowers"],
         "translations": [
             {
                 "translation": "гвоздика",
@@ -750,10 +686,8 @@
     {
         "word": "gladiolus",
         "transcription": "[ˈɡlædɪˈəʊləsɪz]",
-        "img": "/static/words/gladiolus.jpg",
-        "themes": [
-            "flowers"
-        ],
+        "img": "/resources/words/gladiolus.jpg",
+        "themes": ["flowers"],
         "translations": [
             {
                 "translation": "гладиолус",
@@ -768,10 +702,8 @@
     {
         "word": "lily",
         "transcription": "[ˈlɪlɪ]",
-        "img": "/static/words/lily.jpg",
-        "themes": [
-            "flowers"
-        ],
+        "img": "/resources/words/lily.jpg",
+        "themes": ["flowers"],
         "translations": [
             {
                 "translation": "лилия",
@@ -790,10 +722,8 @@
     {
         "word": "orchid",
         "transcription": "[ˈɔːkɪd]",
-        "img": "/static/words/orchid.jpg",
-        "themes": [
-            "flowers"
-        ],
+        "img": "/resources/words/orchid.jpg",
+        "themes": ["flowers"],
         "translations": [
             {
                 "translation": "орхидея",
@@ -808,10 +738,8 @@
     {
         "word": "peony",
         "transcription": "[ˈpiːənɪ]",
-        "img": "/static/words/peony.jpg",
-        "themes": [
-            "flowers"
-        ],
+        "img": "/resources/words/peony.jpg",
+        "themes": ["flowers"],
         "translations": [
             {
                 "translation": "пион",
@@ -822,10 +750,8 @@
     {
         "word": "daisy",
         "transcription": "[ˈdeɪzɪ]",
-        "img": "/static/words/daisy.jpg",
-        "themes": [
-            "flowers"
-        ],
+        "img": "/resources/words/daisy.jpg",
+        "themes": ["flowers"],
         "translations": [
             {
                 "translation": "маргаритка",
@@ -848,10 +774,8 @@
     {
         "word": "violet",
         "transcription": "[ˈvaɪəlɪt]",
-        "img": "/static/words/violet.jpg",
-        "themes": [
-            "flowers"
-        ],
+        "img": "/resources/words/violet.jpg",
+        "themes": ["flowers"],
         "translations": [
             {
                 "translation": "фиалка",
@@ -870,10 +794,8 @@
     {
         "word": "lotus",
         "transcription": "[ˈləʊtəs]",
-        "img": "/static/words/lotus.jpg",
-        "themes": [
-            "flowers"
-        ],
+        "img": "/resources/words/lotus.jpg",
+        "themes": ["flowers"],
         "translations": [
             {
                 "translation": "лотос",
@@ -884,10 +806,8 @@
     {
         "word": "sunflower",
         "transcription": "[ˈsʌnˌflaʊə]",
-        "img": "/static/words/sunflower.jpg",
-        "themes": [
-            "flowers"
-        ],
+        "img": "/resources/words/sunflower.jpg",
+        "themes": ["flowers"],
         "translations": [
             {
                 "translation": "подсолнух",
@@ -898,10 +818,8 @@
     {
         "word": "dahlia",
         "transcription": "[ˈdeɪljə]",
-        "img": "/static/words/dahlia.jpg",
-        "themes": [
-            "flowers"
-        ],
+        "img": "/resources/words/dahlia.jpg",
+        "themes": ["flowers"],
         "translations": [
             {
                 "translation": "георгина",
@@ -912,10 +830,8 @@
     {
         "word": "dandelion",
         "transcription": "[ˈdændɪlaɪən]",
-        "img": "/static/words/dandelion.jpg",
-        "themes": [
-            "flowers"
-        ],
+        "img": "/resources/words/dandelion.jpg",
+        "themes": ["flowers"],
         "translations": [
             {
                 "translation": "одуванчик",
@@ -926,10 +842,8 @@
     {
         "word": "lavender",
         "transcription": "[ˈlævɪndə]",
-        "img": "/static/words/lavender.jpg",
-        "themes": [
-            "flowers"
-        ],
+        "img": "/resources/words/lavender.jpg",
+        "themes": ["flowers"],
         "translations": [
             {
                 "translation": "лаванда",
@@ -948,10 +862,8 @@
     {
         "word": "tool",
         "transcription": "[tuːl]",
-        "img": "/static/words/tool.jpg",
-        "themes": [
-            "tools"
-        ],
+        "img": "/resources/words/tool.jpg",
+        "themes": ["tools"],
         "translations": [
             {
                 "translation": "инструмент",
@@ -974,10 +886,8 @@
     {
         "word": "hammer",
         "transcription": "[‘hæmə]",
-        "img": "/static/words/hammer.jpg",
-        "themes": [
-            "tools"
-        ],
+        "img": "/resources/words/hammer.jpg",
+        "themes": ["tools"],
         "translations": [
             {
                 "translation": "молоток",
@@ -1000,10 +910,8 @@
     {
         "word": "handsaw",
         "transcription": "[‘hæn(d)sɔː]",
-        "img": "/static/words/handsaw.jpg",
-        "themes": [
-            "tools"
-        ],
+        "img": "/resources/words/handsaw.jpg",
+        "themes": ["tools"],
         "translations": [
             {
                 "translation": "ручная пила",
@@ -1018,10 +926,8 @@
     {
         "word": "sandpaper",
         "transcription": "[‘sæn(d)ˌpeɪpə]",
-        "img": "/static/words/sandpaper.jpg",
-        "themes": [
-            "tools"
-        ],
+        "img": "/resources/words/sandpaper.jpg",
+        "themes": ["tools"],
         "translations": [
             {
                 "translation": "наждачная бумага",
@@ -1040,10 +946,8 @@
     {
         "word": "drill",
         "transcription": "[drɪl]",
-        "img": "/static/words/drill.jpg",
-        "themes": [
-            "tools"
-        ],
+        "img": "/resources/words/drill.jpg",
+        "themes": ["tools"],
         "translations": [
             {
                 "translation": "дрель",
@@ -1070,10 +974,8 @@
     {
         "word": "vise",
         "transcription": "[vaɪs]",
-        "img": "/static/words/vise.jpg",
-        "themes": [
-            "tools"
-        ],
+        "img": "/resources/words/vise.jpg",
+        "themes": ["tools"],
         "translations": [
             {
                 "translation": "тиски",
@@ -1096,10 +998,8 @@
     {
         "word": "screwdriver",
         "transcription": "[‘skruːˌdraɪvə]",
-        "img": "/static/words/screwdriver.jpg",
-        "themes": [
-            "tools"
-        ],
+        "img": "/resources/words/screwdriver.jpg",
+        "themes": ["tools"],
         "translations": [
             {
                 "translation": "отвертка",
@@ -1118,10 +1018,8 @@
     {
         "word": "awl",
         "transcription": "[ɔːl]",
-        "img": "/static/words/awl.jpg",
-        "themes": [
-            "tools"
-        ],
+        "img": "/resources/words/awl.jpg",
+        "themes": ["tools"],
         "translations": [
             {
                 "translation": "шило",
@@ -1132,10 +1030,8 @@
     {
         "word": "chisel",
         "transcription": "[‘ʧɪz(ə)l]",
-        "img": "/static/words/chisel.jpg",
-        "themes": [
-            "tools"
-        ],
+        "img": "/resources/words/chisel.jpg",
+        "themes": ["tools"],
         "translations": [
             {
                 "translation": "зубило",
@@ -1162,10 +1058,8 @@
     {
         "word": "wrench",
         "transcription": "[ren(t)ʃ]",
-        "img": "/static/words/wrench.jpg",
-        "themes": [
-            "tools"
-        ],
+        "img": "/resources/words/wrench.jpg",
+        "themes": ["tools"],
         "translations": [
             {
                 "translation": "гаечный ключ",
@@ -1188,10 +1082,8 @@
     {
         "word": "pliers",
         "transcription": "[‘plaɪəz]",
-        "img": "/static/words/pliers.jpg",
-        "themes": [
-            "tools"
-        ],
+        "img": "/resources/words/pliers.jpg",
+        "themes": ["tools"],
         "translations": [
             {
                 "translation": "плоскогубцы",
@@ -1214,18 +1106,12 @@
     {
         "word": "axe",
         "transcription": "[æks]",
-        "img": "/static/words/axe.jpg",
-        "themes": [
-            "tools"
-        ],
+        "img": "/resources/words/axe.jpg",
+        "themes": ["tools"],
         "translations": [
             {
                 "translation": "топор",
                 "frequency": 45
-            },
-            {
-                "translation": "топор",
-                "frequency": 25
             },
             {
                 "translation": "секира",
@@ -1244,10 +1130,8 @@
     {
         "word": "food",
         "transcription": "[fuːd]",
-        "img": "/static/words/food.jpg",
-        "themes": [
-            "food"
-        ],
+        "img": "/resources/words/food.jpg",
+        "themes": ["food"],
         "translations": [
             {
                 "translation": "еда",
@@ -1274,10 +1158,8 @@
     {
         "word": "ham",
         "transcription": "[hæm]",
-        "img": "/static/words/ham.jpg",
-        "themes": [
-            "food"
-        ],
+        "img": "/resources/words/ham.jpg",
+        "themes": ["food"],
         "translations": [
             {
                 "translation": "ветчина",
@@ -1304,10 +1186,8 @@
     {
         "word": "sausage",
         "transcription": "[‘sɔsɪʤ]",
-        "img": "/static/words/sausage.jpg",
-        "themes": [
-            "food"
-        ],
+        "img": "/resources/words/sausage.jpg",
+        "themes": ["food"],
         "translations": [
             {
                 "translation": "колбаса",
@@ -1326,10 +1206,8 @@
     {
         "word": "egg",
         "transcription": "[eg]",
-        "img": "/static/words/egg.jpg",
-        "themes": [
-            "food"
-        ],
+        "img": "/resources/words/egg.jpg",
+        "themes": ["food"],
         "translations": [
             {
                 "translation": "яйцо",
@@ -1348,10 +1226,8 @@
     {
         "word": "pizza",
         "transcription": "[‘piːtsə]",
-        "img": "/static/words/pizza.jpg",
-        "themes": [
-            "food"
-        ],
+        "img": "/resources/words/pizza.jpg",
+        "themes": ["food"],
         "translations": [
             {
                 "translation": "пицца",
@@ -1362,10 +1238,8 @@
     {
         "word": "soup",
         "transcription": "[suːp]",
-        "img": "/static/words/soup.jpg",
-        "themes": [
-            "food"
-        ],
+        "img": "/resources/words/soup.jpg",
+        "themes": ["food"],
         "translations": [
             {
                 "translation": "суп",
@@ -1384,10 +1258,8 @@
     {
         "word": "bread",
         "transcription": "[bred]",
-        "img": "/static/words/bread.jpg",
-        "themes": [
-            "food"
-        ],
+        "img": "/resources/words/bread.jpg",
+        "themes": ["food"],
         "translations": [
             {
                 "translation": "хлеб",
@@ -1410,10 +1282,8 @@
     {
         "word": "milk",
         "transcription": "[mɪlk]",
-        "img": "/static/words/milk.jpg",
-        "themes": [
-            "food"
-        ],
+        "img": "/resources/words/milk.jpg",
+        "themes": ["food"],
         "translations": [
             {
                 "translation": "молоко",
@@ -1428,10 +1298,8 @@
     {
         "word": "porridge",
         "transcription": "[‘pɔrɪʤ]",
-        "img": "/static/words/porridge.jpg",
-        "themes": [
-            "food"
-        ],
+        "img": "/resources/words/porridge.jpg",
+        "themes": ["food"],
         "translations": [
             {
                 "translation": "каша",
@@ -1450,10 +1318,8 @@
     {
         "word": "cookie",
         "transcription": "[‘kukɪ]",
-        "img": "/static/words/cookie.jpg",
-        "themes": [
-            "food"
-        ],
+        "img": "/resources/words/cookie.jpg",
+        "themes": ["food"],
         "translations": [
             {
                 "translation": "печенье",
@@ -1468,10 +1334,8 @@
     {
         "word": "cocktail",
         "transcription": "[‘kɔkteɪl]",
-        "img": "/static/words/cocktail.jpg",
-        "themes": [
-            "food"
-        ],
+        "img": "/resources/words/cocktail.jpg",
+        "themes": ["food"],
         "translations": [
             {
                 "translation": "коктейль",
@@ -1490,10 +1354,8 @@
     {
         "word": "pie",
         "transcription": "[paɪ]",
-        "img": "/static/words/pie.jpg",
-        "themes": [
-            "food"
-        ],
+        "img": "/resources/words/pie.jpg",
+        "themes": ["food"],
         "translations": [
             {
                 "translation": "пирог",
